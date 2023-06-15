@@ -53,7 +53,7 @@ class Model {
          */
         virtual ~Model();
         
-        
+        void teste();
         /**
         * @brief Adiciona um sistema ao modelo.
         * @param system Ponteiro para o sistema a ser adicionado.
