@@ -1,0 +1,7 @@
+<map id="MyFlow" name="MyFlow">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,188,72,215"/>
+<area shape="rect" id="Node000002" href="$class_flow.html" title="Classe responsável por representar um fluxo." alt="" coords="14,112,63,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="41,153,41,188,36,188,36,153"/>
+<area shape="rect" id="Node000003" href="$class_system.html" title="Classe responsável por representar um sistema." alt="" coords="5,5,72,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="41,47,41,112,36,112,36,47"/>
+</map>

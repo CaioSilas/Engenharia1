@@ -1,0 +1,381 @@
+\doxysection{Model Class Reference}
+\hypertarget{class_model}{}\label{class_model}\index{Model@{Model}}
+
+
+Classe responsável por representar um modelo.  
+
+
+
+
+{\ttfamily \#include $<$model.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef vector$<$ \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} $>$\+::iterator \mbox{\hyperlink{class_model_a6ee7e31b02b03db955c631d88c21f1be}{system\+Iterator}}
+\item 
+typedef vector$<$ \mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} $>$\+::iterator \mbox{\hyperlink{class_model_ab49462747685b9625739b323fbdb373b}{flow\+Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_ae3b375de5f6df4faf74a95d64748e048}{Model}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_model}{Model}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_a05bce6b6663e96b9ea82b6b9261e37a1}{Model}} (string=\"{}\"{}, double=0)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_model}{Model}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_model_ad6ebd2062a0b823db841a0b88baac4c0}{\texorpdfstring{$\sim$}{\string~}\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_model}{Model}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_ae4d749689ba490e2a74d64bb10721a94}{add}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Adiciona um sistema ao modelo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_a94757709637014384aa155189ada81e4}{add}} (\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Adiciona um fluxo ao modelo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_a61a4ff002499124e9722cbae1f2fc8f8}{run}} (int=0, int=0, int=1)
+\begin{DoxyCompactList}\small\item\em Roda um modelo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_a6ee7e31b02b03db955c631d88c21f1be}{system\+Iterator}} \mbox{\hyperlink{class_model_ab49a403cd190b087cdb61822ef486a96}{system\+Begin}} (void)
+\item 
+\mbox{\hyperlink{class_model_a6ee7e31b02b03db955c631d88c21f1be}{system\+Iterator}} \mbox{\hyperlink{class_model_a4c84a2018bb68f1134f836de3a9af5f6}{system\+End}} (void)
+\item 
+\mbox{\hyperlink{class_model_ab49462747685b9625739b323fbdb373b}{flow\+Iterator}} \mbox{\hyperlink{class_model_a4b411f0ae115b2e0c44249a55db47b88}{flow\+Begin}} (void)
+\item 
+\mbox{\hyperlink{class_model_ab49462747685b9625739b323fbdb373b}{flow\+Iterator}} \mbox{\hyperlink{class_model_a604b844d16298df2bddd6228e36f688e}{flow\+End}} (void)
+\item 
+void \mbox{\hyperlink{class_model_a9f2d47e748a492dbdf62d03422cdae26}{set\+Name}} (const string)
+\begin{DoxyCompactList}\small\item\em Define o nome do modelo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_a93554fd7dd8e3c6cc446f325cf5f90a5}{set\+Time}} (const double)
+\begin{DoxyCompactList}\small\item\em Define o intervalo de tempo da simulação. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_model_a65e1711255fbab5883708002ef89f773}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o nome do modelo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_model_a06d9f606f122597dc5426811f765987a}{get\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o tempo inicial da simulação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_model_a2d9aef6a80a205a03e4e99b5483af9a0}{name}}
+\item 
+double \mbox{\hyperlink{class_model_ac08e6be5375c12b4f09dfd3e88552e46}{time}}
+\item 
+vector$<$ \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_model_ac7dea8829149e597d2671dbc0a538bf7}{systems}}
+\item 
+vector$<$ \mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_model_aa76c9411f1cf6da6f4c696b2feadcb1a}{flows}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe responsável por representar um modelo. 
+
+Um modelo contém sistemas e fluxos que são usados para simular um sistema real ou teórico. Exemplo de uso\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_system}{System}}\ *p1=\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_system}{System}}(\textcolor{stringliteral}{"{}p1"{}},\ 100.0);}
+\DoxyCodeLine{\mbox{\hyperlink{class_system}{System}}\ *p2=\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_system}{System}}(\textcolor{stringliteral}{"{}p2"{}},\ 10.0);}
+\DoxyCodeLine{FlowLogistico*\ logFlow\ =\ \textcolor{keyword}{new}\ FlowLogistico(\textcolor{stringliteral}{"{}logFlow"{}},\ p1,p2);}
+\DoxyCodeLine{\mbox{\hyperlink{class_model}{Model}}\ *logModel=\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_model_ae3b375de5f6df4faf74a95d64748e048}{Model}}(\textcolor{stringliteral}{"{}logModel"{}},0,100,1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{logModel-\/>\mbox{\hyperlink{class_model_ae4d749689ba490e2a74d64bb10721a94}{add}}(p1);}
+\DoxyCodeLine{logModel-\/>\mbox{\hyperlink{class_model_ae4d749689ba490e2a74d64bb10721a94}{add}}(p2);}
+\DoxyCodeLine{logModel-\/>\mbox{\hyperlink{class_model_ae4d749689ba490e2a74d64bb10721a94}{add}}(logFlow);}
+\DoxyCodeLine{}
+\DoxyCodeLine{logModel-\/>execute();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{delete}(logModel);}
+\DoxyCodeLine{\textcolor{keyword}{delete}(p1);}
+\DoxyCodeLine{\textcolor{keyword}{delete}(p2);}
+\DoxyCodeLine{\textcolor{keyword}{delete}(logFlow);}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_model_ab49462747685b9625739b323fbdb373b}\label{class_model_ab49462747685b9625739b323fbdb373b} 
+\index{Model@{Model}!flowIterator@{flowIterator}}
+\index{flowIterator@{flowIterator}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{flowIterator}{flowIterator}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{class_flow}{Flow}}\texorpdfstring{$\ast$}{*}$>$\+::iterator \mbox{\hyperlink{class_model_ab49462747685b9625739b323fbdb373b}{Model\+::flow\+Iterator}}}
+
+\Hypertarget{class_model_a6ee7e31b02b03db955c631d88c21f1be}\label{class_model_a6ee7e31b02b03db955c631d88c21f1be} 
+\index{Model@{Model}!systemIterator@{systemIterator}}
+\index{systemIterator@{systemIterator}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{systemIterator}{systemIterator}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{class_system}{System}}\texorpdfstring{$\ast$}{*}$>$\+::iterator \mbox{\hyperlink{class_model_a6ee7e31b02b03db955c631d88c21f1be}{Model\+::system\+Iterator}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_model_ae3b375de5f6df4faf74a95d64748e048}\label{class_model_ae3b375de5f6df4faf74a95d64748e048} 
+\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe \doxylink{class_model}{Model}. 
+
+\Hypertarget{class_model_a05bce6b6663e96b9ea82b6b9261e37a1}\label{class_model_a05bce6b6663e96b9ea82b6b9261e37a1} 
+\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Model\+::\+Model (\begin{DoxyParamCaption}\item[{string}]{name = {\ttfamily \"{}\"{}},  }\item[{double}]{time = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_model}{Model}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nome do modelo. \\
+\hline
+{\em Time} & Tempo inicial da simulação. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_model_ad6ebd2062a0b823db841a0b88baac4c0}\label{class_model_ad6ebd2062a0b823db841a0b88baac4c0} 
+\index{Model@{Model}!````~Model@{\texorpdfstring{$\sim$}{\string~}Model}}
+\index{````~Model@{\texorpdfstring{$\sim$}{\string~}Model}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Model()}{\string~Model()}}
+{\footnotesize\ttfamily Model\+::\texorpdfstring{$\sim$}{\string~}\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destrutor da classe \doxylink{class_model}{Model}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_model_a94757709637014384aa155189ada81e4}\label{class_model_a94757709637014384aa155189ada81e4} 
+\index{Model@{Model}!add@{add}}
+\index{add@{add}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*}}]{flow }\end{DoxyParamCaption})}
+
+
+
+Adiciona um fluxo ao modelo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flow} & Ponteiro para o fluxo a ser adicionado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_model_ae4d749689ba490e2a74d64bb10721a94}\label{class_model_ae4d749689ba490e2a74d64bb10721a94} 
+\index{Model@{Model}!add@{add}}
+\index{add@{add}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{system }\end{DoxyParamCaption})}
+
+
+
+Adiciona um sistema ao modelo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em system} & Ponteiro para o sistema a ser adicionado. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_model_ae4d749689ba490e2a74d64bb10721a94_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_model_a4b411f0ae115b2e0c44249a55db47b88}\label{class_model_a4b411f0ae115b2e0c44249a55db47b88} 
+\index{Model@{Model}!flowBegin@{flowBegin}}
+\index{flowBegin@{flowBegin}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{flowBegin()}{flowBegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_ab49462747685b9625739b323fbdb373b}{Model\+::flow\+Iterator}} Model\+::flow\+Begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Função que sera usada para auxiliar percorrer um interator de flow
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & um poteiro do void.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returna um ponteiro para o inicio do intereitor. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_model_a4b411f0ae115b2e0c44249a55db47b88_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_model_a604b844d16298df2bddd6228e36f688e}\label{class_model_a604b844d16298df2bddd6228e36f688e} 
+\index{Model@{Model}!flowEnd@{flowEnd}}
+\index{flowEnd@{flowEnd}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{flowEnd()}{flowEnd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_ab49462747685b9625739b323fbdb373b}{Model\+::flow\+Iterator}} Model\+::flow\+End (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Função que sera usada para auxiliar percorrer um interator de flow
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & um poteiro do void.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returna um ponteiro para o final do intereitor. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_model_a604b844d16298df2bddd6228e36f688e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_model_a65e1711255fbab5883708002ef89f773}\label{class_model_a65e1711255fbab5883708002ef89f773} 
+\index{Model@{Model}!getName@{getName}}
+\index{getName@{getName}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Model\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém o nome do modelo. 
+
+\begin{DoxyReturn}{Returns}
+O nome do modelo. 
+\end{DoxyReturn}
+\Hypertarget{class_model_a06d9f606f122597dc5426811f765987a}\label{class_model_a06d9f606f122597dc5426811f765987a} 
+\index{Model@{Model}!getTime@{getTime}}
+\index{getTime@{getTime}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily double Model\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém o tempo inicial da simulação. 
+
+\begin{DoxyReturn}{Returns}
+O tempo inicial da simulação. 
+\end{DoxyReturn}
+\Hypertarget{class_model_a61a4ff002499124e9722cbae1f2fc8f8}\label{class_model_a61a4ff002499124e9722cbae1f2fc8f8} 
+\index{Model@{Model}!run@{run}}
+\index{run@{run}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Model\+::run (\begin{DoxyParamCaption}\item[{int}]{time\+Start = {\ttfamily 0},  }\item[{int}]{time\+End = {\ttfamily 0},  }\item[{int}]{time\+Variance = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Roda um modelo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Initial} & tempo de inicio. \\
+\hline
+{\em time\+End} & tempo final. \\
+\hline
+{\em time\+Variance} & variancia do for. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{class_model_a61a4ff002499124e9722cbae1f2fc8f8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_model_a61a4ff002499124e9722cbae1f2fc8f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_model_a9f2d47e748a492dbdf62d03422cdae26}\label{class_model_a9f2d47e748a492dbdf62d03422cdae26} 
+\index{Model@{Model}!setName@{setName}}
+\index{setName@{setName}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Model\+::set\+Name (\begin{DoxyParamCaption}\item[{const string}]{name }\end{DoxyParamCaption})}
+
+
+
+Define o nome do modelo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & O nome do modelo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_model_a93554fd7dd8e3c6cc446f325cf5f90a5}\label{class_model_a93554fd7dd8e3c6cc446f325cf5f90a5} 
+\index{Model@{Model}!setTime@{setTime}}
+\index{setTime@{setTime}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily void Model\+::set\+Time (\begin{DoxyParamCaption}\item[{const double}]{time }\end{DoxyParamCaption})}
+
+
+
+Define o intervalo de tempo da simulação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+Time} & O tempo inicial da simulação. \\
+\hline
+{\em final\+Time} & O tempo final da simulação. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_model_ab49a403cd190b087cdb61822ef486a96}\label{class_model_ab49a403cd190b087cdb61822ef486a96} 
+\index{Model@{Model}!systemBegin@{systemBegin}}
+\index{systemBegin@{systemBegin}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{systemBegin()}{systemBegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_a6ee7e31b02b03db955c631d88c21f1be}{Model\+::system\+Iterator}} Model\+::system\+Begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Função que sera usada para auxiliar percorrer um interator de system
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & um poteiro do void.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returna um ponteiro para inicio do intereitor. 
+\end{DoxyReturn}
+\Hypertarget{class_model_a4c84a2018bb68f1134f836de3a9af5f6}\label{class_model_a4c84a2018bb68f1134f836de3a9af5f6} 
+\index{Model@{Model}!systemEnd@{systemEnd}}
+\index{systemEnd@{systemEnd}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{systemEnd()}{systemEnd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model_a6ee7e31b02b03db955c631d88c21f1be}{Model\+::system\+Iterator}} Model\+::system\+End (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Função que sera usada para auxiliar percorrer um interator de system
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & um poteiro do void.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returna um ponteiro para o final do intereitor. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_model_aa76c9411f1cf6da6f4c696b2feadcb1a}\label{class_model_aa76c9411f1cf6da6f4c696b2feadcb1a} 
+\index{Model@{Model}!flows@{flows}}
+\index{flows@{flows}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{flows}{flows}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_flow}{Flow}}\texorpdfstring{$\ast$}{*}$>$ Model\+::flows\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_model_a2d9aef6a80a205a03e4e99b5483af9a0}\label{class_model_a2d9aef6a80a205a03e4e99b5483af9a0} 
+\index{Model@{Model}!name@{name}}
+\index{name@{name}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Model\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_model_ac7dea8829149e597d2671dbc0a538bf7}\label{class_model_ac7dea8829149e597d2671dbc0a538bf7} 
+\index{Model@{Model}!systems@{systems}}
+\index{systems@{systems}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{systems}{systems}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_system}{System}}\texorpdfstring{$\ast$}{*}$>$ Model\+::systems\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_model_ac08e6be5375c12b4f09dfd3e88552e46}\label{class_model_ac08e6be5375c12b4f09dfd3e88552e46} 
+\index{Model@{Model}!time@{time}}
+\index{time@{time}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily double Model\+::time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{model_8h}{model.\+h}}\item 
+src/\mbox{\hyperlink{model_8cpp}{model.\+cpp}}\end{DoxyCompactItemize}

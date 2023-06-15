@@ -1,0 +1,16 @@
+	Compilando o código (monolito):
+
+(dentro do diretório test/funcional...):
+
+g++ *.cpp ../../src/*.cpp -o ../../bin/exe -Wall
+
+
+
+
+
+
+
+
+
+
+
