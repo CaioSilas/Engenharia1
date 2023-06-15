@@ -22,8 +22,8 @@ void exponentialFuncionalTest(){
     m1.add(&exponential); 
     m1.run(0, 100, 1);
 
-    assert(fabs(pop1.getValue()-36.6032) < 0.0001);
-    assert(fabs(pop2.getValue()-63.3968) < 0.0001);
+    assert(round((pop1.getValue() - 36.6032) * 10000) == 0);
+    assert(round((pop2.getValue() - 63.3968) * 10000) == 0);
     
 }
 
@@ -67,12 +67,11 @@ void complexFuncionalTest(){
     m1.run(0, 100, 1);
 
 
-    assert(abs(Q1.getValue()-31.8513) < 0.0001);
-    assert(abs(Q2.getValue()-18.4004) < 0.0001);
-    assert(abs(Q3.getValue()-77.1143) < 0.0001);
-    assert(abs(Q4.getValue()-56.1728) < 0.0001);
-    assert(abs(Q5.getValue()-16.4612) < 0.0001);
-
+    assert(round((Q1.getValue() - 31.8513) * 10000) == 0);
+    assert(round((Q2.getValue() - 18.4003) * 10000) == 0);
+    assert(round((Q3.getValue() - 77.1143) * 10000) == 0);
+    assert(round((Q4.getValue() - 56.1728) * 10000) == 0);
+    assert(round((Q5.getValue() - 16.4612) * 10000) == 0);
 
 }
 
