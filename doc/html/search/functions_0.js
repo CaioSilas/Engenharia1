@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['add_0',['add',['../class_model.html#ae4d749689ba490e2a74d64bb10721a94',1,'Model::add(System *)'],['../class_model.html#a94757709637014384aa155189ada81e4',1,'Model::add(Flow *)']]]
+  ['add_0',['add',['../class_model.html#adfbf55405d1ad4cb402173be240f68ab',1,'Model::add(System *System)=0'],['../class_model.html#ada623a42142666699a6a2b3f5199bbe6',1,'Model::add(Flow *Flow)=0'],['../class_model_impl.html#a4ff1d5c1bbacac368eb0dd7c507d70a4',1,'ModelImpl::add(System *System)'],['../class_model_impl.html#a906ad04753c35d4f4beec0871ec5fa72',1,'ModelImpl::add(Flow *Flow)']]]
 ];
