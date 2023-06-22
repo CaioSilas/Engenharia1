@@ -1,162 +1,124 @@
-#ifndef MODEL_H
-#define MODEL_H
+
+#ifndef Model_H
+#define Model_H
 
 #include <string>
 #include <vector>
 #include <iterator>
-#include "flow.h"
-#include "system.h"
+#include "System.h"
+#include "Flow.h"
 
 using namespace std;
 
-
 /**
- * @brief Classe responsável por representar um modelo.
- * 
- * Um modelo contém sistemas e fluxos que são usados para simular um sistema real ou teórico.
- * Exemplo de uso:
- * \code{.cpp}
- *  System *p1= new System("p1", 100.0);
-    System *p2= new System("p2", 10.0);
-    FlowLogistico* logFlow = new FlowLogistico("logFlow", p1,p2);
-    Model *logModel= new Model("logModel",0,100,1);
-
-    logModel->add(p1);
-    logModel->add(p2);
-    logModel->add(logFlow);
-
-    logModel->execute();
-
-    delete(logModel);
-    delete(p1);
-    delete(p2);
-    delete(logFlow);
-
- * \endcode
+ * @brief Class for Model Interface representation
  * 
  */
+
 class Model {
     public:
-        /**
-         * @brief Construtor padrão da classe Model.
-         */
-        Model();
-
-        /**
-         * @brief Construtor da classe Model.
-         * @param name Nome do modelo.
-         * @param Time Tempo inicial da simulação.
-         */
-        Model(string = "", double = 0);
-         /**
-         * @brief Destrutor da classe Model.
-         */
-        virtual ~Model();
         
-        void teste();
         /**
-        * @brief Adiciona um sistema ao modelo.
-        * @param system Ponteiro para o sistema a ser adicionado.
-        */
-        void add(System*);
-        /**
-        * @brief Adiciona um fluxo ao modelo.
-        * @param flow Ponteiro para o fluxo a ser adicionado.
-        */
-        void add(Flow*);
-        /**
-        * @brief Roda um modelo.
-        * @param timeInitial tempo de inicio.
-        * @param timeEnd tempo final.
-        * @param timeVariance variancia do for.
-        * 
-        */
-        void run(int = 0, int = 0, int = 1);
-
-        typedef vector<System*>::iterator systemIterator;
-        typedef vector<Flow*>::iterator flowIterator;
+	     * @brief Destroy the Model Interface object
+	     * 
+	     */
+        virtual ~Model() {}
 
         /**
-         *  Função que sera usada para auxiliar percorrer um interator de system
-         *
-         *
-         * @param  void um poteiro do void.
+	     * @brief Add a new System Interface to the System Interface container
+	     * 
+	     * @param sys System Interface to be added
+	     */
+        virtual void add(System* System) = 0;
+
+        /**
+	     * @brief Add a new Flow to the Flow container
+	     * 
+	     * @param Flow Flow to be added
+	     */
+        virtual void add(Flow* Flow) = 0;
+
+        /**
+	     * @brief Run the simulation
+	     * 
+	     * @param timeStart initial time for the simulation
+	     * @param timeEnd final time for the simulation
+	     * @param timeVariance time step for the simulation
+	     * @return true: if it the simulation succesful
+	     * @return false: if it the simulation unsuccesful
+	     */
+        virtual void run(int timeStart = 0, int timeEnd = 0, int timeVariance = 1) = 0;
+        
+        /**
+         * @brief Get the First Iterator of System Interface the container
+         *  
+         * @return vector<System*>::iterator : First Iterator
+         */
+        virtual vector<System*>::iterator SystemBegin(void) = 0;
+
+        /**
+         * @brief Get the Last Iterator of the System Interface container
          * 
-         * @return returna um ponteiro para inicio do intereitor.
+         * @return vector<System*>::iterator 
          */
-        systemIterator systemBegin(void);
+        virtual vector<System*>::iterator SystemEnd(void) = 0;
+
         /**
-         *  Função que sera usada para auxiliar percorrer um interator de system
-         *
-         *
-         * @param  void um poteiro do void.
+         * @brief Get the First Iterator of the Flow container
          * 
-         * @return returna um ponteiro para o final do intereitor.
+         * @return vector<Flow*>::iterator 
          */
-        systemIterator systemEnd(void);
+        virtual vector<Flow*>::iterator FlowBegin(void) = 0;
+
         /**
-         *  Função que sera usada para auxiliar percorrer um interator de flow
-         *
-         *
-         * @param  void um poteiro do void.
+         * @brief Get the Last Iterator of the Flow container
          * 
-         * @return returna um ponteiro para o inicio do intereitor.
+         * @return vector<Flow*>::iterator 
          */
-        flowIterator flowBegin(void);
-        /**
-         *  Função que sera usada para auxiliar percorrer um interator de flow
-         *
-         *
-         * @param  void um poteiro do void.
-         * 
-         * @return returna um ponteiro para o final do intereitor.
-         */
-        flowIterator flowEnd(void);
+        virtual vector<Flow*>::iterator FlowEnd(void) = 0;
 
-        //sets
         /**
-         * @brief Define o nome do modelo.
-         * @param name O nome do modelo.
-         */
-        void setName(const string);
-          /**
-         * @brief Define o intervalo de tempo da simulação.
-         * @param initialTime O tempo inicial da simulação.
-         * @param finalTime O tempo final da simulação.
-         */
-        void setTime(const double);
+	     * @brief Set the Name object
+	     * 
+	     * @param name New name for the Model Interface
+	     */
+        virtual void setName(const string name) = 0;
 
-        //gets
-         /**
-         * @brief Obtém o nome do modelo.
-         * @return O nome do modelo.
-         */
-        string getName() const;
         /**
-         * @brief Obtém o tempo inicial da simulação.
-         * @return O tempo inicial da simulação.
-         */
-        double getTime() const;
+	     * @brief Set the Time object
+	     * 
+	     * @param time New initial time for the Model Interface
+	     */
+        virtual void setTime(const double time) = 0;
 
-    protected:
-        string name;
-        double time;
-        vector<System*> systems;
-        vector<Flow*> flows;
-
-    private:
         /**
-         * @brief Operador de atribuição sobrecarregado.
-         * @param obj Objeto Model a ser atribuído.
-         * @return Referência para o objeto Model atualizado.
-        */
-        Model(const Model& obj);
-         /**
-         * @brief Operador de igualdade sobrecarregado.
-         * @param other Objeto Model a ser comparado.
-         * @return true se os objetos são iguais, false caso contrário.
-        */  
-        Model& operator=(const Model&); 
+	     * @brief Get the Name object
+	     * 
+	     * @return string: Model name
+	     */
+        virtual string getName() const = 0;
+
+        /**
+	     * @brief Get the Time object
+	     * 
+	     * @return double: Model initial time
+	     */
+        virtual double getTime() const = 0;
+    
+        // /**
+	    //  * @brief Construct a new Model object by copying other System
+	    //  * 
+	    //  * @param obj Model to be copied
+	    //  */
+        // Model(const Model& obj);  
+
+        // /**
+	    //  * @brief Overload the assignment operator (=)
+        //  * 
+        //  * @param rhs Model to be copied
+        //  * @return Model&: return the copy
+        //  */
+        // Model& operator=(const Model& rhs); 
 };
 
-#endif
+#endif /* Model_H */
