@@ -8,7 +8,7 @@
 #include "System.h"
 #include "Flow.h"
 
-using namespace std;
+using std::vector;
 
 /**
  * @brief Class for Model Interface representation
@@ -17,6 +17,40 @@ using namespace std;
 
 class Model {
     public:
+
+        /**
+        * @brief Instantiates a model
+        * @param name give a name of model
+        * @param time give a time od model
+        * @return Model*: The created model
+        *  
+        */
+	    static Model* createModel(const string name = "", const double time = 0.0);
+
+
+        /**
+        * @brief Creates a Flow and add it to the model
+        * @param name A name to flow
+        * @param source A pointer to the source system
+        * @param destiny A pointer to the destiny system
+        * @return Flow*: Returns a pointer to the created Flow
+        *  
+        */
+        template <typename T_FLOW>
+        Flow* createFlow(string name,System* source=NULL, System* destiny=NULL) {
+            Flow* f = new T_FLOW(name,source, destiny);
+            add(f);
+            return f;
+        }
+
+        /**
+        * @brief Creates a System and add it to the model
+        * @param value Initial value to the created system
+        * @param name Name to the created system
+        * @return System*: The system that was just created
+        *  
+        */
+        virtual System* createSystem(double value=0, string name="")=0;
         
         /**
 	     * @brief Destroy the Model Interface object
@@ -48,6 +82,9 @@ class Model {
 	     * @return false: if it the simulation unsuccesful
 	     */
         virtual void run(int timeStart = 0, int timeEnd = 0, int timeVariance = 1) = 0;
+
+        typedef vector<System*>::iterator systemIterator;
+        typedef vector<Flow*>::iterator flowIterator;
         
         /**
          * @brief Get the First Iterator of System Interface the container

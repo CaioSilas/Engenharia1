@@ -28,7 +28,7 @@ class Flow {
          * @param source New source System Interface for the Flow 
          * @param destiny New destiny System Interface for the Flow
          */
-        virtual void connect(System* = NULL, System* = NULL) = 0;
+        virtual void connect(System*source = NULL, System*destiny = NULL) = 0;
         
         /**
 	     * @brief Execute the Flow equation

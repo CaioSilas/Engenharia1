@@ -1,5 +1,0 @@
-<map id="MyFlow" name="MyFlow">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,72,107"/>
-<area shape="rect" id="Node000002" href="$class_flow.html" title="Classe responsável por representar um fluxo." alt="" coords="14,5,63,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="41,47,41,80,36,80,36,47"/>
-</map>

@@ -25,7 +25,6 @@ void unitModelDestructor(void);
  * @brief Unit test for the Getter of the Attribute name of Model
  * 
  */
-void unitModelGetName(void);
 
 /**
  * @brief Unit test for the Setter of the Attribute name of Model

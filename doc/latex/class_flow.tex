@@ -7,7 +7,7 @@
 
 
 
-{\ttfamily \#include $<$Flow.\+h$>$}
+{\ttfamily \#include $<$flow.\+h$>$}
 
 
 
@@ -16,7 +16,7 @@ Inheritance diagram for Flow\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=134pt]{class_flow__inherit__graph}
+\includegraphics[width=350pt]{class_flow__inherit__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -24,7 +24,7 @@ Inheritance diagram for Flow\+:
 \item 
 virtual \mbox{\hyperlink{class_flow_a325d284a50ca3274b126b21f5c39b9af}{\texorpdfstring{$\sim$}{\string~}\+Flow}} ()
 \begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_flow}{Flow} object. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_flow_aca8d8d9c4a6c555120901211409490b4}{connect}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}=NULL, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}=NULL)=0
+virtual void \mbox{\hyperlink{class_flow_adc4b0fc616476c6bb0afe22a8a2bbdca}{connect}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}source=NULL, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}destiny=NULL)=0
 \begin{DoxyCompactList}\small\item\em Set the source and the destiny of the \doxylink{class_flow}{Flow} object. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_flow_a619be0b590c78202127bc6ac7fb04029}{execute}} ()=0
 \begin{DoxyCompactList}\small\item\em Execute the \doxylink{class_flow}{Flow} equation Abstract method to be overriden. \end{DoxyCompactList}\item 
@@ -51,6 +51,10 @@ virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox
 
 
 
+Definition at line \mbox{\hyperlink{flow_8h_source_l00016}{16}} of file \mbox{\hyperlink{flow_8h_source}{flow.\+h}}.
+
+
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_flow_a325d284a50ca3274b126b21f5c39b9af}\label{class_flow_a325d284a50ca3274b126b21f5c39b9af} 
 \index{Flow@{Flow}!````~Flow@{\texorpdfstring{$\sim$}{\string~}Flow}}
@@ -64,12 +68,16 @@ Destroy the \doxylink{class_flow}{Flow} object.
 
 
 
+Definition at line \mbox{\hyperlink{flow_8h_source_l00023}{23}} of file \mbox{\hyperlink{flow_8h_source}{flow.\+h}}.
+
+
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_flow_aca8d8d9c4a6c555120901211409490b4}\label{class_flow_aca8d8d9c4a6c555120901211409490b4} 
+\Hypertarget{class_flow_adc4b0fc616476c6bb0afe22a8a2bbdca}\label{class_flow_adc4b0fc616476c6bb0afe22a8a2bbdca} 
 \index{Flow@{Flow}!connect@{connect}}
 \index{connect@{connect}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{connect()}{connect()}}
-{\footnotesize\ttfamily virtual void Flow\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{ = {\ttfamily NULL},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{ = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Flow\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{source = {\ttfamily NULL},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{destiny = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -84,7 +92,7 @@ Set the source and the destiny of the \doxylink{class_flow}{Flow} object.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{class_flow_impl_a5351c6638f9ce6d93b1cd0a5808d406a}{Flow\+Impl}}.
+Implemented in \mbox{\hyperlink{class_flow_impl_a02919f28597a1a3ebfbb6eacce770898}{Flow\+Impl}}.
 
 \Hypertarget{class_flow_a619be0b590c78202127bc6ac7fb04029}\label{class_flow_a619be0b590c78202127bc6ac7fb04029} 
 \index{Flow@{Flow}!execute@{execute}}
@@ -101,7 +109,7 @@ double\+: \doxylink{class_flow}{Flow} value after executing
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}.
+Implemented in \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}, \mbox{\hyperlink{class_exponential_a964853e66548d52dced447ee180b0b3e}{Exponential}}, \mbox{\hyperlink{class_logistic_a7c9c146b7c74df11d41bd467641927e0}{Logistic}}, \mbox{\hyperlink{class_complex_a098f5eb821e1006f63ad252e16085c6a}{Complex}}, and \mbox{\hyperlink{class_test_flow_a6257ffbbc05952774d9768c7674dc536}{Test\+Flow}}.
 
 \Hypertarget{class_flow_adcdc94255a4a9013b5fd8d3e4cee9a9a}\label{class_flow_adcdc94255a4a9013b5fd8d3e4cee9a9a} 
 \index{Flow@{Flow}!getDestiny@{getDestiny}}
@@ -251,4 +259,4 @@ Implemented in \mbox{\hyperlink{class_flow_impl_a28b3c4b23db663e2c9f2a1d5d10f1ce
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/\mbox{\hyperlink{_flow_8h}{Flow.\+h}}\end{DoxyCompactItemize}
+src/\mbox{\hyperlink{flow_8h}{flow.\+h}}\end{DoxyCompactItemize}
