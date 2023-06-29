@@ -10,7 +10,7 @@
 #include "System.h"
 #include "Model.h"
 
-using namespace std;
+// using namespace std;
 
 /**
  * @brief Class for ModelImpl representation
@@ -21,12 +21,31 @@ class ModelImpl : public Model{
     public:
 
         /**
+        * @brief  fabric of model
+        * @param name give a nome of model
+        * @param time give a time of model
+        * @return Model*: The created model
+        *  
+        */
+	    static Model* createModel(const string name = "", const double time = 0.0);
+
+
+        /**
+        * @brief Creates a System and add it to the model
+        * @param value Initial value to the created system
+        * @param name Name to the created system
+        * @return System*: The system that was just created
+        *  
+        */
+        System* createSystem(double value=0, string name="");
+        /**
 	     * @brief Construct a new ModelImpl object
 	     * 
 	     * @param name ModelImpl name
 	     * @param time ModelImpl initial time
 	     */
-        ModelImpl(string name = "", double time = 0);
+        ModelImpl(string name = "",double time = 0);
+
 
         /**
 	     * @brief Destroy the ModelImpl object
@@ -125,14 +144,21 @@ class ModelImpl : public Model{
 	     */
         double getTime() const;
 
+        /**
+	     * @brief Add a new Model to the Model container
+	     * 
+	     * @param Model Model to be added
+	     */
+        static void add(Model* Model);
+        
     protected:
-
-    private:
         string name; /**< ModelImpl name id */
         double time; /**< System actual time */
         vector<System*> systems; /**< ModelImpl container for Systems */
         vector<Flow*> flows; /**< ModelImpl container for Flows */
+        static vector<Model*> models;
 
+    private:
         /**
 	     * @brief Construct a new ModelImpl object by copying other System
 	     * 

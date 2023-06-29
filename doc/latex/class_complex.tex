@@ -1,0 +1,166 @@
+\doxysection{Complex Class Reference}
+\hypertarget{class_complex}{}\label{class_complex}\index{Complex@{Complex}}
+
+
+Class for \doxylink{class_complex}{Complex} representation that especifies \doxylink{class_flow_impl}{Flow\+Impl}.  
+
+
+
+
+{\ttfamily \#include $<$flows.\+h$>$}
+
+
+
+Inheritance diagram for Complex\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_complex__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Complex\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_complex__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_complex_a24f4a12abbf80df69f6e2f6f3147e4d3}{Complex}} (const string \mbox{\hyperlink{class_flow_impl_a4f3915297f6ef9d76acc5f9fef67342c}{name}}=\"{}\"{}, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}}=NULL, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_a82ba7e99ef0e7346c95a7240a925c5b5}{destiny}}=NULL)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_complex}{Complex} object. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_complex_a098f5eb821e1006f63ad252e16085c6a}{execute}} (void)
+\begin{DoxyCompactList}\small\item\em Execute the \doxylink{class_flow_impl}{Flow\+Impl} equation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_flow_impl}{Flow\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_flow_impl_ae19f6383a98214c9042b70c604853d3d}{Flow\+Impl}} (string nome=\"{}\"{}, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}}=NULL, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_a82ba7e99ef0e7346c95a7240a925c5b5}{destiny}}=NULL)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_flow_impl}{Flow\+Impl} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_flow_impl_a2d91539593b336aee4a19048f8a82e8c}{\texorpdfstring{$\sim$}{\string~}\+Flow\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_flow_impl}{Flow\+Impl} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_impl_a02919f28597a1a3ebfbb6eacce770898}{connect}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}}=NULL, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_a82ba7e99ef0e7346c95a7240a925c5b5}{destiny}}=NULL)
+\begin{DoxyCompactList}\small\item\em Set the source and the destiny of the \doxylink{class_flow_impl}{Flow\+Impl} object. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{execute}} ()=0
+\begin{DoxyCompactList}\small\item\em Execute the \doxylink{class_flow_impl}{Flow\+Impl} equation Abstract method to be overriden. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_impl_a0487f9399ae9ff5a40915457e97b80b9}{set\+Name}} (const string \mbox{\hyperlink{class_flow_impl_a4f3915297f6ef9d76acc5f9fef67342c}{name}})
+\begin{DoxyCompactList}\small\item\em Set the Name object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_impl_a28b3c4b23db663e2c9f2a1d5d10f1ce9}{set\+Value}} (const double \mbox{\hyperlink{class_flow_impl_a26263fd1dc5ec1da3921246f07c089e6}{value}})
+\begin{DoxyCompactList}\small\item\em Set the Last Value object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_impl_a2690ee44103e90261b91635955122a5d}{set\+Source}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}})
+\begin{DoxyCompactList}\small\item\em Set the Source object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_impl_a6c10a21cdebcf6051068ac35b63f90e8}{set\+Destiny}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_a82ba7e99ef0e7346c95a7240a925c5b5}{destiny}})
+\begin{DoxyCompactList}\small\item\em Set the Destiny object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_flow_impl_a63453811afa24e0799e54e22161738a8}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_flow_impl_a11af0c3c7576c45b7b66153623267e59}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Get the Last Value object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_impl_a54940323059d2c4158f4146080841f32}{get\+Source}} () const
+\begin{DoxyCompactList}\small\item\em Get the Source object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_impl_a633cf2d2cadcdc5a24f28e412366c8e1}{get\+Destiny}} () const
+\begin{DoxyCompactList}\small\item\em Get the Destiny object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_flow}{Flow}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_flow_a325d284a50ca3274b126b21f5c39b9af}{\texorpdfstring{$\sim$}{\string~}\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_flow}{Flow} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flow_adc4b0fc616476c6bb0afe22a8a2bbdca}{connect}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}source=NULL, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}destiny=NULL)=0
+\begin{DoxyCompactList}\small\item\em Set the source and the destiny of the \doxylink{class_flow}{Flow} object. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_flow_a619be0b590c78202127bc6ac7fb04029}{execute}} ()=0
+\begin{DoxyCompactList}\small\item\em Execute the \doxylink{class_flow}{Flow} equation Abstract method to be overriden. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flow_a719883d550abcfcb9dfcd4a7e1b86443}{set\+Name}} (const string name)=0
+\begin{DoxyCompactList}\small\item\em Set the Name object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flow_a2792aa1ad9ed34e994e1889b49889012}{set\+Value}} (const double value)=0
+\begin{DoxyCompactList}\small\item\em Set the Last Value object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flow_a42ce99a961622788ae59bb73abad3bb3}{set\+Source}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}source)=0
+\begin{DoxyCompactList}\small\item\em Set the Source object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flow_a4eb5e8714d7972d31d3b8c3b03b196e8}{set\+Destiny}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}destiny)=0
+\begin{DoxyCompactList}\small\item\em Set the Destiny object. \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{class_flow_aa91a8025b6dbb27ee5137c7c9ad0c564}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_flow_a8acd2815f580b2c0b29f7fd703b3cdc4}{get\+Value}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the Last Value object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_abf0f3dbb285fe82e5ba6449de06b97c8}{get\+Source}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the Source object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_adcdc94255a4a9013b5fd8d3e4cee9a9a}{get\+Destiny}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the Destiny object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_flow_impl}{Flow\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_flow_impl_a4f3915297f6ef9d76acc5f9fef67342c}{name}}
+\item 
+double \mbox{\hyperlink{class_flow_impl_a26263fd1dc5ec1da3921246f07c089e6}{value}}
+\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}}
+\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_impl_a82ba7e99ef0e7346c95a7240a925c5b5}{destiny}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for \doxylink{class_complex}{Complex} representation that especifies \doxylink{class_flow_impl}{Flow\+Impl}. 
+
+
+
+Definition at line \mbox{\hyperlink{flows_8h_source_l00071}{71}} of file \mbox{\hyperlink{flows_8h_source}{flows.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_complex_a24f4a12abbf80df69f6e2f6f3147e4d3}\label{class_complex_a24f4a12abbf80df69f6e2f6f3147e4d3} 
+\index{Complex@{Complex}!Complex@{Complex}}
+\index{Complex@{Complex}!Complex@{Complex}}
+\doxysubsubsection{\texorpdfstring{Complex()}{Complex()}}
+{\footnotesize\ttfamily Complex\+::\+Complex (\begin{DoxyParamCaption}\item[{const string}]{name = {\ttfamily \"{}\"{}},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{source = {\ttfamily NULL},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{destiny = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxylink{class_complex}{Complex} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_complex}{Complex} value \\
+\hline
+{\em source} & Pointer to source \doxylink{class_system}{System} \\
+\hline
+{\em destiny} & Pointer to destiny \doxylink{class_system}{System} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{flows_8h_source_l00081}{81}} of file \mbox{\hyperlink{flows_8h_source}{flows.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_complex_a098f5eb821e1006f63ad252e16085c6a}\label{class_complex_a098f5eb821e1006f63ad252e16085c6a} 
+\index{Complex@{Complex}!execute@{execute}}
+\index{execute@{execute}!Complex@{Complex}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual double Complex\+::execute (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Execute the \doxylink{class_flow_impl}{Flow\+Impl} equation. 
+
+\begin{DoxyReturn}{Returns}
+double\+: result of equation 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}.
+
+
+
+Definition at line \mbox{\hyperlink{flows_8h_source_l00088}{88}} of file \mbox{\hyperlink{flows_8h_source}{flows.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/funcional/\mbox{\hyperlink{flows_8h}{flows.\+h}}\end{DoxyCompactItemize}

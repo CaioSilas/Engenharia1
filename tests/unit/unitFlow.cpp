@@ -110,8 +110,9 @@ void unitFlowSetDestiny(void){
 
 void unitFlowGetValue(void){
     Flow *flow = new Complex();
+    flow->setValue(13);
 
-    assert(flow->getValue() == 0);
+    assert(flow->getValue() == 13);
 
     delete flow;
 }

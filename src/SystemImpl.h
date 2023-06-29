@@ -15,6 +15,12 @@ using namespace std;
 
 class SystemImpl : public System{
     public:
+
+		/**
+		* @brief Creates empty system
+		*  
+		*/
+		SystemImpl();
 	
         /**
 	     * @brief Construct a new SystemImpl object

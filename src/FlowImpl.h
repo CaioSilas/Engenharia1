@@ -24,7 +24,7 @@ class FlowImpl : public Flow{
 	     * @param source Pointer to source System Interface
          * @param destiny Pointer to destiny System Interface
 	     */
-        FlowImpl(string name = "", System* source = NULL, System* destiny = NULL);
+        FlowImpl( string nome = "" ,System* source = NULL, System* destiny = NULL);
         
         /**
          * @brief Destroy the FlowImpl object
@@ -38,7 +38,7 @@ class FlowImpl : public Flow{
          * @param source New source System Interface for the FlowImpl 
          * @param destiny New destiny System Interface for the FlowImpl
          */
-        void connect(System* = NULL, System* = NULL);
+        void connect(System*source = NULL, System*destiny = NULL);
         
         /**
 	     * @brief Execute the FlowImpl equation
