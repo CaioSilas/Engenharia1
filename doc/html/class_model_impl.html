@@ -73,8 +73,8 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="class_model_impl-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ModelImpl Class Reference</div></div>
 </div><!--header-->
@@ -90,7 +90,7 @@ Inheritance diagram for ModelImpl:</div>
 <div class="center"><img src="class_model_impl__inherit__graph.png" border="0" usemap="#a_model_impl_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_model_impl_inherit__map" id="a_model_impl_inherit__map">
 <area shape="rect" title="Class for ModelImpl representation." alt="" coords="5,80,86,107"/>
-<area shape="rect" href="class_model.html" title="Class for Model Interface representation." alt="" coords="17,5,74,32"/>
+<area shape="rect" href="class_body.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="20,5,71,32"/>
 <area shape="poly" title=" " alt="" coords="48,47,48,80,43,80,43,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -99,15 +99,9 @@ Collaboration diagram for ModelImpl:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_impl__coll__graph.png" border="0" usemap="#a_model_impl_coll__map" alt="Collaboration graph"/></div>
 <map name="a_model_impl_coll__map" id="a_model_impl_coll__map">
-<area shape="rect" title="Class for ModelImpl representation." alt="" coords="185,96,266,123"/>
-<area shape="rect" href="class_model.html" title="Class for Model Interface representation." alt="" coords="5,5,62,32"/>
-<area shape="poly" title=" " alt="" coords="75,36,199,93,197,98,73,41"/>
-<area shape="rect" title=" " alt="" coords="86,5,219,32"/>
-<area shape="poly" title=" " alt="" coords="174,42,217,94,213,97,170,45"/>
-<area shape="rect" title=" " alt="" coords="243,5,358,32"/>
-<area shape="poly" title=" " alt="" coords="282,45,258,74,238,97,234,94,254,70,278,42"/>
-<area shape="rect" title=" " alt="" coords="383,5,506,32"/>
-<area shape="poly" title=" " alt="" coords="400,41,258,98,256,93,398,36"/>
+<area shape="rect" title="Class for ModelImpl representation." alt="" coords="5,80,86,107"/>
+<area shape="rect" href="class_body.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="20,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="48,47,48,80,43,80,43,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -119,29 +113,29 @@ Public Types</h2></td></tr>
 <tr class="memitem:a77937a503ecb22fb63792fb6ba2d8d21"><td class="memItemLeft" align="right" valign="top">typedef vector&lt; <a class="el" href="class_flow.html">Flow</a> * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a77937a503ecb22fb63792fb6ba2d8d21">FlowIterator</a></td></tr>
 <tr class="memdesc:a77937a503ecb22fb63792fb6ba2d8d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">typedef a container for the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> pointers  <br /></td></tr>
 <tr class="separator:a77937a503ecb22fb63792fb6ba2d8d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_class_model"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_model')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_model.html">Model</a></td></tr>
-<tr class="memitem:a6ee7e31b02b03db955c631d88c21f1be inherit pub_types_class_model"><td class="memItemLeft" align="right" valign="top">typedef vector&lt; <a class="el" href="class_system.html">System</a> * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a6ee7e31b02b03db955c631d88c21f1be">systemIterator</a></td></tr>
-<tr class="separator:a6ee7e31b02b03db955c631d88c21f1be inherit pub_types_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab49462747685b9625739b323fbdb373b inherit pub_types_class_model"><td class="memItemLeft" align="right" valign="top">typedef vector&lt; <a class="el" href="class_flow.html">Flow</a> * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ab49462747685b9625739b323fbdb373b">flowIterator</a></td></tr>
-<tr class="separator:ab49462747685b9625739b323fbdb373b inherit pub_types_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47bce651f22df3f9bbef05a3ffd280f3"><td class="memItemLeft" align="right" valign="top">typedef vector&lt; <a class="el" href="class_model.html">Model</a> * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a47bce651f22df3f9bbef05a3ffd280f3">ModelIterator</a></td></tr>
+<tr class="memdesc:a47bce651f22df3f9bbef05a3ffd280f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">typedef a container for the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> pointers  <br /></td></tr>
+<tr class="separator:a47bce651f22df3f9bbef05a3ffd280f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9998865b25d409e2282952a6a461f199"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_system.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a9998865b25d409e2282952a6a461f199">createSystem</a> (double value=0, string <a class="el" href="class_model_impl.html#aa32e79af7c5dfa46a3ea476796a33fb4">name</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:a9998865b25d409e2282952a6a461f199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_system.html" title="System interface.">System</a> and add it to the model.  <br /></td></tr>
-<tr class="separator:a9998865b25d409e2282952a6a461f199"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a751f7f75d6ae839f91295d130b9e777f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a751f7f75d6ae839f91295d130b9e777f">ModelImpl</a> (string <a class="el" href="class_model_impl.html#aa32e79af7c5dfa46a3ea476796a33fb4">name</a>=&quot;&quot;, double <a class="el" href="class_model_impl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>=0)</td></tr>
+<tr class="memitem:a485f3c074b09b39ca0c57ff97a5ba295"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_system.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a485f3c074b09b39ca0c57ff97a5ba295">createSystem</a> (const string name=&quot;&quot;, const double value=0)</td></tr>
+<tr class="separator:a485f3c074b09b39ca0c57ff97a5ba295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad31eb9602c78b87707a112585520ff06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#ad31eb9602c78b87707a112585520ff06">deleteSystem</a> (<a class="el" href="class_system.html">System</a> *const system)</td></tr>
+<tr class="memdesc:ad31eb9602c78b87707a112585520ff06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete and remove a <a class="el" href="class_system.html" title="System interface.">System</a> from the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a>.  <br /></td></tr>
+<tr class="separator:ad31eb9602c78b87707a112585520ff06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a5c247a175a7bf8a9257f603ab8b9e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a4a5c247a175a7bf8a9257f603ab8b9e0">deleteFlow</a> (<a class="el" href="class_flow.html">Flow</a> *const <a class="el" href="class_flow.html">Flow</a>)</td></tr>
+<tr class="memdesc:a4a5c247a175a7bf8a9257f603ab8b9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete and remove a <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> from the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a>.  <br /></td></tr>
+<tr class="separator:a4a5c247a175a7bf8a9257f603ab8b9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751f7f75d6ae839f91295d130b9e777f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a751f7f75d6ae839f91295d130b9e777f">ModelImpl</a> (string name=&quot;&quot;, double time=0)</td></tr>
 <tr class="memdesc:a751f7f75d6ae839f91295d130b9e777f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_model_impl.html" title="Class for ModelImpl representation.">ModelImpl</a> object.  <br /></td></tr>
 <tr class="separator:a751f7f75d6ae839f91295d130b9e777f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a427f422a6d356b94afbe3937d6452a2b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a427f422a6d356b94afbe3937d6452a2b">~ModelImpl</a> ()</td></tr>
 <tr class="memdesc:a427f422a6d356b94afbe3937d6452a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_model_impl.html" title="Class for ModelImpl representation.">ModelImpl</a> object.  <br /></td></tr>
 <tr class="separator:a427f422a6d356b94afbe3937d6452a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ff1d5c1bbacac368eb0dd7c507d70a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a4ff1d5c1bbacac368eb0dd7c507d70a4">add</a> (<a class="el" href="class_system.html">System</a> *<a class="el" href="class_system.html">System</a>)</td></tr>
-<tr class="memdesc:a4ff1d5c1bbacac368eb0dd7c507d70a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new <a class="el" href="class_system.html" title="System interface.">System</a> to the <a class="el" href="class_system.html" title="System interface.">System</a> container.  <br /></td></tr>
-<tr class="separator:a4ff1d5c1bbacac368eb0dd7c507d70a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a906ad04753c35d4f4beec0871ec5fa72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a906ad04753c35d4f4beec0871ec5fa72">add</a> (<a class="el" href="class_flow.html">Flow</a> *<a class="el" href="class_flow.html">Flow</a>)</td></tr>
-<tr class="memdesc:a906ad04753c35d4f4beec0871ec5fa72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> to the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> container.  <br /></td></tr>
-<tr class="separator:a906ad04753c35d4f4beec0871ec5fa72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63e1b1dceafc4f696cc549c604d31b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#aa63e1b1dceafc4f696cc549c604d31b2">add</a> (<a class="el" href="class_flow.html">Flow</a> *const <a class="el" href="class_flow.html">Flow</a>)</td></tr>
+<tr class="memdesc:aa63e1b1dceafc4f696cc549c604d31b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> to the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> container.  <br /></td></tr>
+<tr class="separator:aa63e1b1dceafc4f696cc549c604d31b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bd749d8d1672649da40a248d36f4655"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a6bd749d8d1672649da40a248d36f4655">run</a> (int timeStart=0, int timeEnd=0, int timeVariance=1)</td></tr>
 <tr class="memdesc:a6bd749d8d1672649da40a248d36f4655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the simulation.  <br /></td></tr>
 <tr class="separator:a6bd749d8d1672649da40a248d36f4655"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,10 +151,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a5bef5df5b5f9f63248a7d8eac64069"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_model_impl.html#a77937a503ecb22fb63792fb6ba2d8d21">FlowIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a6a5bef5df5b5f9f63248a7d8eac64069">FlowEnd</a> (void)</td></tr>
 <tr class="memdesc:a6a5bef5df5b5f9f63248a7d8eac64069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Last Iterator of the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> container.  <br /></td></tr>
 <tr class="separator:a6a5bef5df5b5f9f63248a7d8eac64069"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3b18d7c8f5ac0e11ddf488db1e834cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#aa3b18d7c8f5ac0e11ddf488db1e834cb">setName</a> (const string <a class="el" href="class_model_impl.html#aa32e79af7c5dfa46a3ea476796a33fb4">name</a>)</td></tr>
+<tr class="memitem:aedd5347124f91e50a808a01ba7577eca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_model_impl.html#a47bce651f22df3f9bbef05a3ffd280f3">ModelIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#aedd5347124f91e50a808a01ba7577eca">ModelBegin</a> (void)</td></tr>
+<tr class="memdesc:aedd5347124f91e50a808a01ba7577eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the First Iterator of the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> container.  <br /></td></tr>
+<tr class="separator:aedd5347124f91e50a808a01ba7577eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea779bd3ab6c78ff2eb12ea9f46500e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_model_impl.html#a47bce651f22df3f9bbef05a3ffd280f3">ModelIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#aea779bd3ab6c78ff2eb12ea9f46500e7">ModelEnd</a> (void)</td></tr>
+<tr class="memdesc:aea779bd3ab6c78ff2eb12ea9f46500e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Last Iterator of the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> container.  <br /></td></tr>
+<tr class="separator:aea779bd3ab6c78ff2eb12ea9f46500e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3b18d7c8f5ac0e11ddf488db1e834cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#aa3b18d7c8f5ac0e11ddf488db1e834cb">setName</a> (const string name)</td></tr>
 <tr class="memdesc:aa3b18d7c8f5ac0e11ddf488db1e834cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Name object.  <br /></td></tr>
 <tr class="separator:aa3b18d7c8f5ac0e11ddf488db1e834cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4d7624c94e85aba4a4ddadcbe0c565e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#af4d7624c94e85aba4a4ddadcbe0c565e">setTime</a> (const double <a class="el" href="class_model_impl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>)</td></tr>
+<tr class="memitem:af4d7624c94e85aba4a4ddadcbe0c565e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#af4d7624c94e85aba4a4ddadcbe0c565e">setTime</a> (const double time)</td></tr>
 <tr class="memdesc:af4d7624c94e85aba4a4ddadcbe0c565e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Time object.  <br /></td></tr>
 <tr class="separator:af4d7624c94e85aba4a4ddadcbe0c565e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a027d6617b69c45b92243c3caca352ba5"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a027d6617b69c45b92243c3caca352ba5">getName</a> () const</td></tr>
@@ -169,79 +169,41 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae3ff615e42e9c4822d13314ea3d48c5a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#ae3ff615e42e9c4822d13314ea3d48c5a">getTime</a> () const</td></tr>
 <tr class="memdesc:ae3ff615e42e9c4822d13314ea3d48c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Time object.  <br /></td></tr>
 <tr class="separator:ae3ff615e42e9c4822d13314ea3d48c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_model')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_model.html">Model</a></td></tr>
-<tr class="memitem:a497d9dd11f6a2fe3276edcc87fee6e12 inherit pub_methods_class_model"><td class="memTemplParams" colspan="2">template&lt;typename T_FLOW &gt; </td></tr>
-<tr class="memitem:a497d9dd11f6a2fe3276edcc87fee6e12 inherit pub_methods_class_model"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_flow.html">Flow</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_model.html#a497d9dd11f6a2fe3276edcc87fee6e12">createFlow</a> (string name, <a class="el" href="class_system.html">System</a> *source=NULL, <a class="el" href="class_system.html">System</a> *destiny=NULL)</td></tr>
-<tr class="memdesc:a497d9dd11f6a2fe3276edcc87fee6e12 inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> and add it to the model.  <br /></td></tr>
-<tr class="separator:a497d9dd11f6a2fe3276edcc87fee6e12 inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ae8fbaec8a8ca6f67473280b0dee794 inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_system.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a1ae8fbaec8a8ca6f67473280b0dee794">createSystem</a> (double value=0, string name=&quot;&quot;)=0</td></tr>
-<tr class="memdesc:a1ae8fbaec8a8ca6f67473280b0dee794 inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_system.html" title="System interface.">System</a> and add it to the model.  <br /></td></tr>
-<tr class="separator:a1ae8fbaec8a8ca6f67473280b0dee794 inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af032d8433c87a0a3a431faf6563a1f03 inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#af032d8433c87a0a3a431faf6563a1f03">~Model</a> ()</td></tr>
-<tr class="memdesc:af032d8433c87a0a3a431faf6563a1f03 inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> Interface object.  <br /></td></tr>
-<tr class="separator:af032d8433c87a0a3a431faf6563a1f03 inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfbf55405d1ad4cb402173be240f68ab inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#adfbf55405d1ad4cb402173be240f68ab">add</a> (<a class="el" href="class_system.html">System</a> *<a class="el" href="class_system.html">System</a>)=0</td></tr>
-<tr class="memdesc:adfbf55405d1ad4cb402173be240f68ab inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new <a class="el" href="class_system.html" title="System interface.">System</a> Interface to the <a class="el" href="class_system.html" title="System interface.">System</a> Interface container.  <br /></td></tr>
-<tr class="separator:adfbf55405d1ad4cb402173be240f68ab inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada623a42142666699a6a2b3f5199bbe6 inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ada623a42142666699a6a2b3f5199bbe6">add</a> (<a class="el" href="class_flow.html">Flow</a> *<a class="el" href="class_flow.html">Flow</a>)=0</td></tr>
-<tr class="memdesc:ada623a42142666699a6a2b3f5199bbe6 inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> to the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> container.  <br /></td></tr>
-<tr class="separator:ada623a42142666699a6a2b3f5199bbe6 inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f2f8e2ed5f060daa56323cee71322e6 inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a9f2f8e2ed5f060daa56323cee71322e6">run</a> (int timeStart=0, int timeEnd=0, int timeVariance=1)=0</td></tr>
-<tr class="memdesc:a9f2f8e2ed5f060daa56323cee71322e6 inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the simulation.  <br /></td></tr>
-<tr class="separator:a9f2f8e2ed5f060daa56323cee71322e6 inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacb95c330f690ee3f0bb942ea9deaba0 inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; <a class="el" href="class_system.html">System</a> * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#aacb95c330f690ee3f0bb942ea9deaba0">SystemBegin</a> (void)=0</td></tr>
-<tr class="memdesc:aacb95c330f690ee3f0bb942ea9deaba0 inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the First Iterator of <a class="el" href="class_system.html" title="System interface.">System</a> Interface the container.  <br /></td></tr>
-<tr class="separator:aacb95c330f690ee3f0bb942ea9deaba0 inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a956db91561813ecccc1c96827fd73c5d inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; <a class="el" href="class_system.html">System</a> * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a956db91561813ecccc1c96827fd73c5d">SystemEnd</a> (void)=0</td></tr>
-<tr class="memdesc:a956db91561813ecccc1c96827fd73c5d inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Last Iterator of the <a class="el" href="class_system.html" title="System interface.">System</a> Interface container.  <br /></td></tr>
-<tr class="separator:a956db91561813ecccc1c96827fd73c5d inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e5ff4567eb5678b7cc74ab015af6dc4 inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; <a class="el" href="class_flow.html">Flow</a> * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a5e5ff4567eb5678b7cc74ab015af6dc4">FlowBegin</a> (void)=0</td></tr>
-<tr class="memdesc:a5e5ff4567eb5678b7cc74ab015af6dc4 inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the First Iterator of the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> container.  <br /></td></tr>
-<tr class="separator:a5e5ff4567eb5678b7cc74ab015af6dc4 inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af424f968d817b1ef91a3a3103be8ff7a inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual vector&lt; <a class="el" href="class_flow.html">Flow</a> * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#af424f968d817b1ef91a3a3103be8ff7a">FlowEnd</a> (void)=0</td></tr>
-<tr class="memdesc:af424f968d817b1ef91a3a3103be8ff7a inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Last Iterator of the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> container.  <br /></td></tr>
-<tr class="separator:af424f968d817b1ef91a3a3103be8ff7a inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad560875016688b7785bdbd0ef1a07d7a inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ad560875016688b7785bdbd0ef1a07d7a">setName</a> (const string name)=0</td></tr>
-<tr class="memdesc:ad560875016688b7785bdbd0ef1a07d7a inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Name object.  <br /></td></tr>
-<tr class="separator:ad560875016688b7785bdbd0ef1a07d7a inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e775f65cfa1a0928b72db5e6427b512 inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a6e775f65cfa1a0928b72db5e6427b512">setTime</a> (const double time)=0</td></tr>
-<tr class="memdesc:a6e775f65cfa1a0928b72db5e6427b512 inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Time object.  <br /></td></tr>
-<tr class="separator:a6e775f65cfa1a0928b72db5e6427b512 inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5365ab557ae47efffdf14ba7a46dac8 inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a> () const =0</td></tr>
-<tr class="memdesc:aa5365ab557ae47efffdf14ba7a46dac8 inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Name object.  <br /></td></tr>
-<tr class="separator:aa5365ab557ae47efffdf14ba7a46dac8 inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41569269c162962571a791c0fe737bca inherit pub_methods_class_model"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a41569269c162962571a791c0fe737bca">getTime</a> () const =0</td></tr>
-<tr class="memdesc:a41569269c162962571a791c0fe737bca inherit pub_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Time object.  <br /></td></tr>
-<tr class="separator:a41569269c162962571a791c0fe737bca inherit pub_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_body"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_body')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_body.html">Body</a></td></tr>
+<tr class="memitem:a7727b0d8c998bbc2942e4c802e31e2eb inherit pub_methods_class_body"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body.html#a7727b0d8c998bbc2942e4c802e31e2eb">Body</a> ()</td></tr>
+<tr class="memdesc:a7727b0d8c998bbc2942e4c802e31e2eb inherit pub_methods_class_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor: zero references when the object is being built.  <br /></td></tr>
+<tr class="separator:a7727b0d8c998bbc2942e4c802e31e2eb inherit pub_methods_class_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d53322c76a6952d096cb7564ac86db1 inherit pub_methods_class_body"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body.html#a5d53322c76a6952d096cb7564ac86db1">attach</a> ()</td></tr>
+<tr class="memdesc:a5d53322c76a6952d096cb7564ac86db1 inherit pub_methods_class_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases the number of references to this object.  <br /></td></tr>
+<tr class="separator:a5d53322c76a6952d096cb7564ac86db1 inherit pub_methods_class_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad481d0c8368db318795c9a0a8fdd3717 inherit pub_methods_class_body"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body.html#ad481d0c8368db318795c9a0a8fdd3717">detach</a> ()</td></tr>
+<tr class="separator:ad481d0c8368db318795c9a0a8fdd3717 inherit pub_methods_class_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ae961812625b8636071ba61b1a75fc inherit pub_methods_class_body"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body.html#a59ae961812625b8636071ba61b1a75fc">refCount</a> ()</td></tr>
+<tr class="memdesc:a59ae961812625b8636071ba61b1a75fc inherit pub_methods_class_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of references to this object.  <br /></td></tr>
+<tr class="separator:a59ae961812625b8636071ba61b1a75fc inherit pub_methods_class_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b15e54cf881ac0ca64790ca1d50110e inherit pub_methods_class_body"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_body.html#a9b15e54cf881ac0ca64790ca1d50110e">~Body</a> ()</td></tr>
+<tr class="memdesc:a9b15e54cf881ac0ca64790ca1d50110e inherit pub_methods_class_body"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:a9b15e54cf881ac0ca64790ca1d50110e inherit pub_methods_class_body"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a66fd8deb99b08336eaff19b95c2a1225"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_model.html">Model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a66fd8deb99b08336eaff19b95c2a1225">createModel</a> (const string <a class="el" href="class_model_impl.html#aa32e79af7c5dfa46a3ea476796a33fb4">name</a>=&quot;&quot;, const double <a class="el" href="class_model_impl.html#aad5b642a4500713444c44bdadd5d19dc">time</a>=0.0)</td></tr>
-<tr class="memdesc:a66fd8deb99b08336eaff19b95c2a1225"><td class="mdescLeft">&#160;</td><td class="mdescRight">fabric of model  <br /></td></tr>
-<tr class="separator:a66fd8deb99b08336eaff19b95c2a1225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26f2aa26b39dbe59bf073e76078493c9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_model.html">Model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a26f2aa26b39dbe59bf073e76078493c9">createModel</a> (const string name=&quot;&quot;, const double time=0)</td></tr>
+<tr class="separator:a26f2aa26b39dbe59bf073e76078493c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe23646244e71b4ade913d1c552581f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a0fe23646244e71b4ade913d1c552581f">deleteModel</a> (<a class="el" href="class_model.html">Model</a> *const <a class="el" href="class_model.html">Model</a>)</td></tr>
+<tr class="memdesc:a0fe23646244e71b4ade913d1c552581f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete and remove a <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> from the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a>.  <br /></td></tr>
+<tr class="separator:a0fe23646244e71b4ade913d1c552581f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a7aa61cefcb4b3590e8aa66426ac2c58e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a7aa61cefcb4b3590e8aa66426ac2c58e">add</a> (<a class="el" href="class_system.html">System</a> *const <a class="el" href="class_system.html">System</a>)</td></tr>
+<tr class="memdesc:a7aa61cefcb4b3590e8aa66426ac2c58e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new <a class="el" href="class_system.html" title="System interface.">System</a> to the <a class="el" href="class_system.html" title="System interface.">System</a> container.  <br /></td></tr>
+<tr class="separator:a7aa61cefcb4b3590e8aa66426ac2c58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6d1dc203f11312f191557e12bc903a0e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a6d1dc203f11312f191557e12bc903a0e">add</a> (<a class="el" href="class_model.html">Model</a> *<a class="el" href="class_model.html">Model</a>)</td></tr>
 <tr class="memdesc:a6d1dc203f11312f191557e12bc903a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> to the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> container.  <br /></td></tr>
 <tr class="separator:a6d1dc203f11312f191557e12bc903a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_class_model"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_model')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_model.html">Model</a></td></tr>
-<tr class="memitem:a7d8e59d69ee5f2a50fdb69b7d00cbd9c inherit pub_static_methods_class_model"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_model.html">Model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a7d8e59d69ee5f2a50fdb69b7d00cbd9c">createModel</a> (const string name=&quot;&quot;, const double time=0.0)</td></tr>
-<tr class="memdesc:a7d8e59d69ee5f2a50fdb69b7d00cbd9c inherit pub_static_methods_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a model.  <br /></td></tr>
-<tr class="separator:a7d8e59d69ee5f2a50fdb69b7d00cbd9c inherit pub_static_methods_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:aa32e79af7c5dfa46a3ea476796a33fb4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#aa32e79af7c5dfa46a3ea476796a33fb4">name</a></td></tr>
-<tr class="separator:aa32e79af7c5dfa46a3ea476796a33fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad5b642a4500713444c44bdadd5d19dc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#aad5b642a4500713444c44bdadd5d19dc">time</a></td></tr>
-<tr class="separator:aad5b642a4500713444c44bdadd5d19dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a767e2054ecaaa8d1401ef2c962adc3e2"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_system.html">System</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a767e2054ecaaa8d1401ef2c962adc3e2">systems</a></td></tr>
-<tr class="separator:a767e2054ecaaa8d1401ef2c962adc3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9be1dcdb4753e5d78e0c817261297dcf"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_flow.html">Flow</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a9be1dcdb4753e5d78e0c817261297dcf">flows</a></td></tr>
-<tr class="separator:a9be1dcdb4753e5d78e0c817261297dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a9c39b73552a3d681f5148d40e1746b8e"><td class="memItemLeft" align="right" valign="top">static vector&lt; <a class="el" href="class_model.html">Model</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_impl.html#a9c39b73552a3d681f5148d40e1746b8e">models</a></td></tr>
-<tr class="separator:a9c39b73552a3d681f5148d40e1746b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for <a class="el" href="class_model_impl.html" title="Class for ModelImpl representation.">ModelImpl</a> representation. </p>
@@ -262,7 +224,25 @@ Static Protected Attributes</h2></td></tr>
 
 <p>typedef a container for the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> pointers </p>
 
-<p class="definition">Definition at line <a class="el" href="_model_impl_8h_source.html#l00089">89</a> of file <a class="el" href="_model_impl_8h_source.html">ModelImpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8h_source.html#l00092">92</a> of file <a class="el" href="_model_impl_8h_source.html">ModelImpl.h</a>.</p>
+
+</div>
+</div>
+<a id="a47bce651f22df3f9bbef05a3ffd280f3" name="a47bce651f22df3f9bbef05a3ffd280f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47bce651f22df3f9bbef05a3ffd280f3">&#9670;&#160;</a></span>ModelIterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef vector&lt;<a class="el" href="class_model.html">Model</a>*&gt;::iterator <a class="el" href="class_model_impl.html#a47bce651f22df3f9bbef05a3ffd280f3">ModelImpl::ModelIterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>typedef a container for the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> pointers </p>
+
+<p class="definition">Definition at line <a class="el" href="_model_impl_8h_source.html#l00097">97</a> of file <a class="el" href="_model_impl_8h_source.html">ModelImpl.h</a>.</p>
 
 </div>
 </div>
@@ -280,7 +260,7 @@ Static Protected Attributes</h2></td></tr>
 
 <p>typedef a container for the <a class="el" href="class_system.html" title="System interface.">System</a> pointers </p>
 
-<p class="definition">Definition at line <a class="el" href="_model_impl_8h_source.html#l00084">84</a> of file <a class="el" href="_model_impl_8h_source.html">ModelImpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8h_source.html#l00087">87</a> of file <a class="el" href="_model_impl_8h_source.html">ModelImpl.h</a>.</p>
 
 </div>
 </div>
@@ -320,7 +300,7 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00025">25</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00067">67</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -349,33 +329,25 @@ Static Protected Attributes</h2></td></tr>
 
 <p>Destroy the <a class="el" href="class_model_impl.html" title="Class for ModelImpl representation.">ModelImpl</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00078">78</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00059">59</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a906ad04753c35d4f4beec0871ec5fa72" name="a906ad04753c35d4f4beec0871ec5fa72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a906ad04753c35d4f4beec0871ec5fa72">&#9670;&#160;</a></span>add() <span class="overload">[1/3]</span></h2>
+<a id="aa63e1b1dceafc4f696cc549c604d31b2" name="aa63e1b1dceafc4f696cc549c604d31b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa63e1b1dceafc4f696cc549c604d31b2">&#9670;&#160;</a></span>add() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ModelImpl::add </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_flow.html">Flow</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_flow.html">Flow</a> *const&#160;</td>
           <td class="paramname"><em>Flow</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Add a new <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> to the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> container. </p>
@@ -386,9 +358,7 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="class_model.html#ada623a42142666699a6a2b3f5199bbe6">Model</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00099">99</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00090">90</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -411,7 +381,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -424,12 +394,12 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00103">103</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00094">94</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a4ff1d5c1bbacac368eb0dd7c507d70a4" name="a4ff1d5c1bbacac368eb0dd7c507d70a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ff1d5c1bbacac368eb0dd7c507d70a4">&#9670;&#160;</a></span>add() <span class="overload">[3/3]</span></h2>
+<a id="a7aa61cefcb4b3590e8aa66426ac2c58e" name="a7aa61cefcb4b3590e8aa66426ac2c58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aa61cefcb4b3590e8aa66426ac2c58e">&#9670;&#160;</a></span>add() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -440,14 +410,14 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ModelImpl::add </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_system.html">System</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_system.html">System</a> *const&#160;</td>
           <td class="paramname"><em>System</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -460,14 +430,12 @@ Static Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="class_model.html#adfbf55405d1ad4cb402173be240f68ab">Model</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00095">95</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00086">86</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a66fd8deb99b08336eaff19b95c2a1225" name="a66fd8deb99b08336eaff19b95c2a1225"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66fd8deb99b08336eaff19b95c2a1225">&#9670;&#160;</a></span>createModel()</h2>
+<a id="a26f2aa26b39dbe59bf073e76078493c9" name="a26f2aa26b39dbe59bf073e76078493c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26f2aa26b39dbe59bf073e76078493c9">&#9670;&#160;</a></span>createModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -485,7 +453,7 @@ Static Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>time</em> = <code>0.0</code>&#160;</td>
+          <td class="paramname"><em>time</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -500,22 +468,70 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>fabric of model </p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00029">29</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a485f3c074b09b39ca0c57ff97a5ba295" name="a485f3c074b09b39ca0c57ff97a5ba295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485f3c074b09b39ca0c57ff97a5ba295">&#9670;&#160;</a></span>createSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_system.html">System</a> * ModelImpl::createSystem </td>
+          <td>(</td>
+          <td class="paramtype">const string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>value</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00019">19</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4a5c247a175a7bf8a9257f603ab8b9e0" name="a4a5c247a175a7bf8a9257f603ab8b9e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a5c247a175a7bf8a9257f603ab8b9e0">&#9670;&#160;</a></span>deleteFlow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ModelImpl::deleteFlow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_flow.html">Flow</a> *const&#160;</td>
+          <td class="paramname"><em>Flow</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete and remove a <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> from the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>give a nome of model </td></tr>
-    <tr><td class="paramname">time</td><td>give a time of model </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_flow.html" title="Flow interface.">Flow</a></td><td>Pointer to <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> to be deleted </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Model*: The created model </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00035">35</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00046">46</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a9998865b25d409e2282952a6a461f199" name="a9998865b25d409e2282952a6a461f199"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9998865b25d409e2282952a6a461f199">&#9670;&#160;</a></span>createSystem()</h2>
+<a id="a0fe23646244e71b4ade913d1c552581f" name="a0fe23646244e71b4ade913d1c552581f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe23646244e71b4ade913d1c552581f">&#9670;&#160;</a></span>deleteModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -524,43 +540,57 @@ Static Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_system.html">System</a> * ModelImpl::createSystem </td>
+          <td class="memname">void ModelImpl::deleteModel </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="class_model.html">Model</a> *const&#160;</td>
+          <td class="paramname"><em>Model</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a <a class="el" href="class_system.html" title="System interface.">System</a> and add it to the model. </p>
+<p>Delete and remove a <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> from the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>Initial value to the created system </td></tr>
-    <tr><td class="paramname">name</td><td>Name to the created system </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a></td><td>Pointer to <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> to be deleted </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>System*: The system that was just created </dd></dl>
 
-<p>Implements <a class="el" href="class_model.html#a1ae8fbaec8a8ca6f67473280b0dee794">Model</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00054">54</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00047">47</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+</div>
+</div>
+<a id="ad31eb9602c78b87707a112585520ff06" name="ad31eb9602c78b87707a112585520ff06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31eb9602c78b87707a112585520ff06">&#9670;&#160;</a></span>deleteSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ModelImpl::deleteSystem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_system.html">System</a> *const&#160;</td>
+          <td class="paramname"><em>system</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete and remove a <a class="el" href="class_system.html" title="System interface.">System</a> from the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>Pointer to <a class="el" href="class_system.html" title="System interface.">System</a> to be deleted </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00035">35</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -569,9 +599,6 @@ Static Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_model_impl.html#a77937a503ecb22fb63792fb6ba2d8d21">ModelImpl::FlowIterator</a> ModelImpl::FlowBegin </td>
@@ -581,19 +608,12 @@ Static Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get the First Iterator of the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> container. </p>
 <dl class="section return"><dt>Returns</dt><dd>FlowIterator </dd></dl>
 
-<p>Implements <a class="el" href="class_model.html#a5e5ff4567eb5678b7cc74ab015af6dc4">Model</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00157">157</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00153">153</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -602,9 +622,6 @@ Static Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_model_impl.html#a77937a503ecb22fb63792fb6ba2d8d21">ModelImpl::FlowIterator</a> ModelImpl::FlowEnd </td>
@@ -614,19 +631,12 @@ Static Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get the Last Iterator of the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> container. </p>
 <dl class="section return"><dt>Returns</dt><dd>FlowIterator </dd></dl>
 
-<p>Implements <a class="el" href="class_model.html#af424f968d817b1ef91a3a3103be8ff7a">Model</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00161">161</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00157">157</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -635,9 +645,6 @@ Static Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">string ModelImpl::getName </td>
@@ -646,19 +653,12 @@ Static Protected Attributes</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get the Name object. </p>
 <dl class="section return"><dt>Returns</dt><dd>string: <a class="el" href="class_model_impl.html" title="Class for ModelImpl representation.">ModelImpl</a> name </dd></dl>
 
-<p>Implements <a class="el" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">Model</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00173">173</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00177">177</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -667,9 +667,6 @@ Static Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double ModelImpl::getTime </td>
@@ -678,19 +675,58 @@ Static Protected Attributes</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get the Time object. </p>
 <dl class="section return"><dt>Returns</dt><dd>double: <a class="el" href="class_model_impl.html" title="Class for ModelImpl representation.">ModelImpl</a> initial time </dd></dl>
 
-<p>Implements <a class="el" href="class_model.html#a41569269c162962571a791c0fe737bca">Model</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00181">181</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00177">177</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+</div>
+</div>
+<a id="aedd5347124f91e50a808a01ba7577eca" name="aedd5347124f91e50a808a01ba7577eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd5347124f91e50a808a01ba7577eca">&#9670;&#160;</a></span>ModelBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_model_impl.html#a47bce651f22df3f9bbef05a3ffd280f3">ModelImpl::ModelIterator</a> ModelImpl::ModelBegin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the First Iterator of the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> container. </p>
+<dl class="section return"><dt>Returns</dt><dd>ModelIterator </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00161">161</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aea779bd3ab6c78ff2eb12ea9f46500e7" name="aea779bd3ab6c78ff2eb12ea9f46500e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea779bd3ab6c78ff2eb12ea9f46500e7">&#9670;&#160;</a></span>ModelEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_model_impl.html#a47bce651f22df3f9bbef05a3ffd280f3">ModelImpl::ModelIterator</a> ModelImpl::ModelEnd </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Last Iterator of the <a class="el" href="class_model.html" title="Class for Model Interface representation.">Model</a> container. </p>
+<dl class="section return"><dt>Returns</dt><dd>ModelIterator </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00165">165</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -699,9 +735,6 @@ Static Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ModelImpl::run </td>
@@ -727,11 +760,6 @@ Static Protected Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Run the simulation. </p>
@@ -747,9 +775,7 @@ Static Protected Attributes</h2></td></tr>
 <dd>
 false: if it the simulation unsuccesful </dd></dl>
 
-<p>Implements <a class="el" href="class_model.html#a9f2f8e2ed5f060daa56323cee71322e6">Model</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00107">107</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00098">98</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -758,9 +784,6 @@ false: if it the simulation unsuccesful </dd></dl>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ModelImpl::setName </td>
@@ -770,11 +793,6 @@ false: if it the simulation unsuccesful </dd></dl>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Set the Name object. </p>
@@ -785,9 +803,7 @@ false: if it the simulation unsuccesful </dd></dl>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="class_model.html#ad560875016688b7785bdbd0ef1a07d7a">Model</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00165">165</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00169">169</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -796,9 +812,6 @@ false: if it the simulation unsuccesful </dd></dl>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ModelImpl::setTime </td>
@@ -808,11 +821,6 @@ false: if it the simulation unsuccesful </dd></dl>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Set the Time object. </p>
@@ -823,9 +831,7 @@ false: if it the simulation unsuccesful </dd></dl>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="class_model.html#a6e775f65cfa1a0928b72db5e6427b512">Model</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00169">169</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00173">173</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -834,9 +840,6 @@ false: if it the simulation unsuccesful </dd></dl>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_model_impl.html#a9c7c7cb9fc1c12a7a738c4931dd579af">ModelImpl::SystemIterator</a> ModelImpl::SystemBegin </td>
@@ -846,19 +849,12 @@ false: if it the simulation unsuccesful </dd></dl>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get the First Iterator of <a class="el" href="class_system.html" title="System interface.">System</a> the container. </p>
 <dl class="section return"><dt>Returns</dt><dd>SystemIterator : First Iterator </dd></dl>
 
-<p>Implements <a class="el" href="class_model.html#aacb95c330f690ee3f0bb942ea9deaba0">Model</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00149">149</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00145">145</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -867,9 +863,6 @@ false: if it the simulation unsuccesful </dd></dl>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_model_impl.html#a9c7c7cb9fc1c12a7a738c4931dd579af">ModelImpl::SystemIterator</a> ModelImpl::SystemEnd </td>
@@ -879,144 +872,12 @@ false: if it the simulation unsuccesful </dd></dl>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Get the Last Iterator of the <a class="el" href="class_system.html" title="System interface.">System</a> container. </p>
 <dl class="section return"><dt>Returns</dt><dd>SystemIterator </dd></dl>
 
-<p>Implements <a class="el" href="class_model.html#a956db91561813ecccc1c96827fd73c5d">Model</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00153">153</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a9be1dcdb4753e5d78e0c817261297dcf" name="a9be1dcdb4753e5d78e0c817261297dcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9be1dcdb4753e5d78e0c817261297dcf">&#9670;&#160;</a></span>flows</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt;<a class="el" href="class_flow.html">Flow</a>*&gt; ModelImpl::flows</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p><a class="el" href="class_model_impl.html" title="Class for ModelImpl representation.">ModelImpl</a> container for Flows </p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8h_source.html#l00158">158</a> of file <a class="el" href="_model_impl_8h_source.html">ModelImpl.h</a>.</p>
-
-</div>
-</div>
-<a id="a9c39b73552a3d681f5148d40e1746b8e" name="a9c39b73552a3d681f5148d40e1746b8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c39b73552a3d681f5148d40e1746b8e">&#9670;&#160;</a></span>models</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt; <a class="el" href="class_model.html">Model</a> * &gt; ModelImpl::models</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8h_source.html#l00159">159</a> of file <a class="el" href="_model_impl_8h_source.html">ModelImpl.h</a>.</p>
-
-</div>
-</div>
-<a id="aa32e79af7c5dfa46a3ea476796a33fb4" name="aa32e79af7c5dfa46a3ea476796a33fb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa32e79af7c5dfa46a3ea476796a33fb4">&#9670;&#160;</a></span>name</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string ModelImpl::name</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p><a class="el" href="class_model_impl.html" title="Class for ModelImpl representation.">ModelImpl</a> name id </p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8h_source.html#l00155">155</a> of file <a class="el" href="_model_impl_8h_source.html">ModelImpl.h</a>.</p>
-
-</div>
-</div>
-<a id="a767e2054ecaaa8d1401ef2c962adc3e2" name="a767e2054ecaaa8d1401ef2c962adc3e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a767e2054ecaaa8d1401ef2c962adc3e2">&#9670;&#160;</a></span>systems</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt;<a class="el" href="class_system.html">System</a>*&gt; ModelImpl::systems</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p><a class="el" href="class_model_impl.html" title="Class for ModelImpl representation.">ModelImpl</a> container for Systems </p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8h_source.html#l00157">157</a> of file <a class="el" href="_model_impl_8h_source.html">ModelImpl.h</a>.</p>
-
-</div>
-</div>
-<a id="aad5b642a4500713444c44bdadd5d19dc" name="aad5b642a4500713444c44bdadd5d19dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad5b642a4500713444c44bdadd5d19dc">&#9670;&#160;</a></span>time</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double ModelImpl::time</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p><a class="el" href="class_system.html" title="System interface.">System</a> actual time </p>
-
-<p class="definition">Definition at line <a class="el" href="_model_impl_8h_source.html#l00156">156</a> of file <a class="el" href="_model_impl_8h_source.html">ModelImpl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_model_impl_8cpp_source.html#l00149">149</a> of file <a class="el" href="_model_impl_8cpp_source.html">ModelImpl.cpp</a>.</p>
 
 </div>
 </div>

@@ -5,8 +5,12 @@
 
 using namespace std;
 
-SystemImpl::SystemImpl() : name("GiveThisSystemAName"), value(0.0) {};
-SystemImpl::SystemImpl(const string name, const double value) : name(name), value(value) {};
+
+SystemImpl::SystemImpl(string name, double value){
+    //ctor
+    this->name = name;
+    this->value = value;
+}
 
 
 SystemImpl::SystemImpl(const SystemImpl& obj){

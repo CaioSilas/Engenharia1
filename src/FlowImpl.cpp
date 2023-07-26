@@ -1,12 +1,17 @@
 
-
 #include "FlowImpl.h"
 #include <string>
 
 using namespace std;
 
 
-FlowImpl::FlowImpl(string name, System* source, System* destiny) : name(name),source(source),destiny(destiny) {}
+FlowImpl::FlowImpl(string name, System* source, System* destiny){
+    //ctor
+    this->name = name;
+    this->source = source;
+    this->destiny = destiny;
+    value = 0;
+}
 
 FlowImpl::FlowImpl(const FlowImpl& obj){
     this->name = obj.name;

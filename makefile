@@ -10,11 +10,20 @@ run_funcionalTests:
 run_unitTests:
 	./bin/unit.exe
 
+runHandleBodyTests:
+	./bin/handleBody.exe
+
 funcionalTests: bin/funcional_main.o bin/funcionalTests.o bin/myVensim.dll
 	$(CC) -o bin/funcional.exe bin/funcional_main.o bin/funcionalTests.o bin/myVensim.dll -Wall
 
 unitTests: bin/unit_main.o bin/unitSystem.o bin/unitFlow.o bin/unitModel.o bin/myVensim.dll
 	$(CC) -o bin/unit.exe bin/unit_main.o bin/unitSystem.o bin/unitFlow.o bin/unitModel.o bin/myVensim.dll -Wall
+
+handleBodyTests: bin/handleBodyMain.o bin/SystemImpl.o bin/FlowImpl.o bin/ModelImpl.o
+	$(CC) -o bin/handleBody.exe bin/handleBodyMain.o bin/SystemImpl.o bin/FlowImpl.o bin/ModelImpl.o -Wall
+
+handleBodyTestsdll: bin/handleBodyMain.o bin/myVensim.dll
+	$(CC) -o bin/handleBody.exe bin/handleBodyMain.o bin/myVensim.dll -Wall
 
 bin/myVensim.dll: bin/systemImpl.o bin/FlowImpl.o bin/ModelImpl.o
 	$(CC) -shared bin/systemImpl.o bin/FlowImpl.o bin/ModelImpl.o -o bin/myVensim.dll
@@ -45,3 +54,6 @@ bin/unitFlow.o: tests/unit/unitFlow.cpp tests/unit/unitFlow.h
 
 bin/unitModel.o: tests/unit/unitModel.cpp tests/unit/unitModel.h
 	$(CC) -c -fPIC tests/unit/unitModel.cpp -o bin/unitModel.o -Wall
+
+bin/handleBodyMain.o: tests/main.cpp 
+	$(CC) tests/main.cpp -c -o bin/handleBodyMain.o -Wall

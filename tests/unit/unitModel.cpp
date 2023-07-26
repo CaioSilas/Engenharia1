@@ -8,12 +8,12 @@
 #include <algorithm>
 #include <iostream>
 
-class TestFlow : public FlowImpl {
+class TestFlow : public FlowHandle {
 public:
-    TestFlow(string nome,System* source, System* destiny) : FlowImpl(nome,source, destiny) {}
+    TestFlow(string nome,System* source, System* destiny) : FlowHandle(nome,source, destiny) {}
     
     virtual double execute(void) {
-        return 0.01 * source->getValue();
+        return 0.01 * (pImpl_->getSource())->getValue();
     }
 };
 
@@ -87,24 +87,17 @@ void unitModelSetTime(void){
 }
 
 void unitModelAdd(void){
-    Model* m = Model::createModel();
+    System *sys;
+    Flow *flow;
+    Model *mod = Model::createModel("Model", 0);
 
-    System* s = m->createSystem(10);
-    System* d = m->createSystem(10);
-    Flow* f = m->createFlow<TestFlow>("f",s, d);
-    Flow* g = m->createFlow<TestFlow>("g",nullptr, nullptr);
+    sys = mod->createSystem();
+    flow = mod->createFlow<TestFlow>();
+    
+    assert(find(mod->SystemBegin(), mod->SystemEnd(), sys) != mod->SystemEnd());
+    assert(find(mod->FlowBegin(), mod->FlowEnd(), flow) != mod->FlowEnd());
 
-    Model::systemIterator sIt = m->SystemBegin();
-    assert((*sIt) == s);
-    sIt++;
-    assert((*sIt) == d);
-
-    Model::flowIterator fIt = m->FlowBegin();
-    assert((*fIt) == f);
-    fIt++;
-    assert((*fIt) == g);
-
-    delete m;
+    delete mod;
 
 }
 

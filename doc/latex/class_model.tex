@@ -11,32 +11,28 @@ Class for \doxylink{class_model}{Model} Interface representation.
 
 
 
-Inheritance diagram for Model\+:\nopagebreak
+Inheritance diagram for Model\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=140pt]{class_model__inherit__graph}
+\includegraphics[width=152pt]{class_model__inherit__graph}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Types}
-\begin{DoxyCompactItemize}
-\item 
-typedef vector$<$ \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} $>$\+::iterator \mbox{\hyperlink{class_model_a6ee7e31b02b03db955c631d88c21f1be}{system\+Iterator}}
-\item 
-typedef vector$<$ \mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} $>$\+::iterator \mbox{\hyperlink{class_model_ab49462747685b9625739b323fbdb373b}{flow\+Iterator}}
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T\+\_\+\+FLOW $>$ }\\\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_model_a497d9dd11f6a2fe3276edcc87fee6e12}{create\+Flow}} (string name, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}source=NULL, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}destiny=NULL)
-\begin{DoxyCompactList}\small\item\em Creates a \doxylink{class_flow}{Flow} and add it to the model. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_model_a1ae8fbaec8a8ca6f67473280b0dee794}{create\+System}} (double value=0, string name=\"{}\"{})=0
-\begin{DoxyCompactList}\small\item\em Creates a \doxylink{class_system}{System} and add it to the model. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_model_a57e65c06daf587c511d00a091e4ff33d}{create\+System}} (const string name=\"{}\"{}, const double value=0)=0
+\begin{DoxyCompactList}\small\item\em Create and add a \doxylink{class_system}{System} to the \doxylink{class_model}{Model}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Concrete\+Flow $>$ }\\\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_model_a5e73f0088bb05d073bc8612d8c08a75e}{create\+Flow}} (const string name=\"{}\"{}, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}source=NULL, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}destiny=NULL)
+\begin{DoxyCompactList}\small\item\em Create and add an Template of \doxylink{class_flow}{Flow} to the \doxylink{class_model}{Model}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_model_aa458f5c2be78bf8d4c8010a593db5315}{delete\+System}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}const system)=0
+\begin{DoxyCompactList}\small\item\em Delete and remove a \doxylink{class_system}{System} from the \doxylink{class_model}{Model}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_model_af169eafea4fdbc5423b6d7f6cb83f8b5}{delete\+Flow}} (\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{class_flow}{Flow}})=0
+\begin{DoxyCompactList}\small\item\em Delete and remove a \doxylink{class_flow}{Flow} from the \doxylink{class_model}{Model}. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_model_af032d8433c87a0a3a431faf6563a1f03}{\texorpdfstring{$\sim$}{\string~}\+Model}} ()
 \begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_model}{Model} Interface object. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_model_adfbf55405d1ad4cb402173be240f68ab}{add}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_system}{System}})=0
-\begin{DoxyCompactList}\small\item\em Add a new \doxylink{class_system}{System} Interface to the \doxylink{class_system}{System} Interface container. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_model_ada623a42142666699a6a2b3f5199bbe6}{add}} (\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow}{Flow}})=0
+virtual void \mbox{\hyperlink{class_model_aeaac546e8d0bc7bc9e04f1ec10f6ca78}{add}} (\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{class_flow}{Flow}})=0
 \begin{DoxyCompactList}\small\item\em Add a new \doxylink{class_flow}{Flow} to the \doxylink{class_flow}{Flow} container. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_model_a9f2f8e2ed5f060daa56323cee71322e6}{run}} (int time\+Start=0, int time\+End=0, int time\+Variance=1)=0
 \begin{DoxyCompactList}\small\item\em Run the simulation. \end{DoxyCompactList}\item 
@@ -48,6 +44,10 @@ virtual vector$<$ \mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*}
 \begin{DoxyCompactList}\small\item\em Get the First Iterator of the \doxylink{class_flow}{Flow} container. \end{DoxyCompactList}\item 
 virtual vector$<$ \mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} $>$\+::iterator \mbox{\hyperlink{class_model_af424f968d817b1ef91a3a3103be8ff7a}{Flow\+End}} (void)=0
 \begin{DoxyCompactList}\small\item\em Get the Last Iterator of the \doxylink{class_flow}{Flow} container. \end{DoxyCompactList}\item 
+virtual vector$<$ \mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} $>$\+::iterator \mbox{\hyperlink{class_model_a14e55a6c5abb67bb0579f5f21fa845d6}{Model\+Begin}} (void)=0
+\begin{DoxyCompactList}\small\item\em Get the First Iterator of the \doxylink{class_model}{Model} container. \end{DoxyCompactList}\item 
+virtual vector$<$ \mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} $>$\+::iterator \mbox{\hyperlink{class_model_a2d28e39ba7946fd92c768454792fbcef}{Model\+End}} (void)=0
+\begin{DoxyCompactList}\small\item\em Get the Last Iterator of the \doxylink{class_model}{Model} container. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_model_ad560875016688b7785bdbd0ef1a07d7a}{set\+Name}} (const string name)=0
 \begin{DoxyCompactList}\small\item\em Set the Name object. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_model_a6e775f65cfa1a0928b72db5e6427b512}{set\+Time}} (const double time)=0
@@ -59,8 +59,10 @@ virtual double \mbox{\hyperlink{class_model_a41569269c162962571a791c0fe737bca}{g
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_model_a7d8e59d69ee5f2a50fdb69b7d00cbd9c}{create\+Model}} (const string name=\"{}\"{}, const double time=0.\+0)
-\begin{DoxyCompactList}\small\item\em Instantiates a model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static \mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_model_a6e8ac9ed2d32a2e73ced0cea261d6ebb}{create\+Model}} (const string name=\"{}\"{}, const double time=0)
+\begin{DoxyCompactList}\small\item\em Create a new \doxylink{class_model}{Model}. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_model_a7c532713f89042ae312edc98818ec242}{delete\+Model}} (\mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{class_model}{Model}})
+\begin{DoxyCompactList}\small\item\em Delete and remove a \doxylink{class_model}{Model} from the \doxylink{class_model}{Model}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -69,29 +71,6 @@ Class for \doxylink{class_model}{Model} Interface representation.
 
 
 Definition at line \mbox{\hyperlink{model_8h_source_l00018}{18}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
-
-
-
-\doxysubsection{Member Typedef Documentation}
-\Hypertarget{class_model_ab49462747685b9625739b323fbdb373b}\label{class_model_ab49462747685b9625739b323fbdb373b} 
-\index{Model@{Model}!flowIterator@{flowIterator}}
-\index{flowIterator@{flowIterator}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{flowIterator}{flowIterator}}
-{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{class_flow}{Flow}}\texorpdfstring{$\ast$}{*}$>$\+::iterator \mbox{\hyperlink{class_model_ab49462747685b9625739b323fbdb373b}{Model\+::flow\+Iterator}}}
-
-
-
-Definition at line \mbox{\hyperlink{model_8h_source_l00087}{87}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
-
-\Hypertarget{class_model_a6ee7e31b02b03db955c631d88c21f1be}\label{class_model_a6ee7e31b02b03db955c631d88c21f1be} 
-\index{Model@{Model}!systemIterator@{systemIterator}}
-\index{systemIterator@{systemIterator}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{systemIterator}{systemIterator}}
-{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{class_system}{System}}\texorpdfstring{$\ast$}{*}$>$\+::iterator \mbox{\hyperlink{class_model_a6ee7e31b02b03db955c631d88c21f1be}{Model\+::system\+Iterator}}}
-
-
-
-Definition at line \mbox{\hyperlink{model_8h_source_l00086}{86}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 
@@ -108,16 +87,16 @@ Destroy the \doxylink{class_model}{Model} Interface object.
 
 
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00059}{59}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00074}{74}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_model_ada623a42142666699a6a2b3f5199bbe6}\label{class_model_ada623a42142666699a6a2b3f5199bbe6} 
+\Hypertarget{class_model_aeaac546e8d0bc7bc9e04f1ec10f6ca78}\label{class_model_aeaac546e8d0bc7bc9e04f1ec10f6ca78} 
 \index{Model@{Model}!add@{add}}
 \index{add@{add}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*}}]{Flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*}const}]{Flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -130,101 +109,130 @@ Add a new \doxylink{class_flow}{Flow} to the \doxylink{class_flow}{Flow} contain
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{class_model_impl_a906ad04753c35d4f4beec0871ec5fa72}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{class_model_handle_ad2ed563aad0cec573df8831f027ce573}{Model\+Handle}}.
 
-\Hypertarget{class_model_adfbf55405d1ad4cb402173be240f68ab}\label{class_model_adfbf55405d1ad4cb402173be240f68ab} 
-\index{Model@{Model}!add@{add}}
-\index{add@{add}!Model@{Model}}
-\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual void Model\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{System }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-
-
-Add a new \doxylink{class_system}{System} Interface to the \doxylink{class_system}{System} Interface container. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em sys} & \doxylink{class_system}{System} Interface to be added \\
-\hline
-\end{DoxyParams}
-
-
-Implemented in \mbox{\hyperlink{class_model_impl_a4ff1d5c1bbacac368eb0dd7c507d70a4}{Model\+Impl}}.
-
-\Hypertarget{class_model_a497d9dd11f6a2fe3276edcc87fee6e12}\label{class_model_a497d9dd11f6a2fe3276edcc87fee6e12} 
+\Hypertarget{class_model_a5e73f0088bb05d073bc8612d8c08a75e}\label{class_model_a5e73f0088bb05d073bc8612d8c08a75e} 
 \index{Model@{Model}!createFlow@{createFlow}}
 \index{createFlow@{createFlow}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{createFlow()}{createFlow()}}
-{\footnotesize\ttfamily template$<$typename T\+\_\+\+FLOW $>$ \\
-\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} Model\+::create\+Flow (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{source = {\ttfamily NULL},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{destiny = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename Concrete\+Flow $>$ \\
+\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} Model\+::create\+Flow (\begin{DoxyParamCaption}\item[{const string}]{name = {\ttfamily \"{}\"{}},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{source = {\ttfamily NULL},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{destiny = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Creates a \doxylink{class_flow}{Flow} and add it to the model. 
+Create and add an Template of \doxylink{class_flow}{Flow} to the \doxylink{class_model}{Model}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em name} & A name to flow \\
+{\em name} & \doxylink{class_flow}{Flow} name \\
 \hline
-{\em source} & A pointer to the source system \\
+{\em source} & Pointer to source \doxylink{class_system}{System} Interface \\
 \hline
-{\em destiny} & A pointer to the destiny system \\
+{\em destiny} & Pointer to destiny \doxylink{class_system}{System} Interface \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Flow\texorpdfstring{$\ast$}{*}\+: Returns a pointer to the created \doxylink{class_flow}{Flow} 
-\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{model_8h_source_l00040}{40}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+Definition at line \mbox{\hyperlink{model_8h_source_l00036}{36}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
 
-\Hypertarget{class_model_a7d8e59d69ee5f2a50fdb69b7d00cbd9c}\label{class_model_a7d8e59d69ee5f2a50fdb69b7d00cbd9c} 
+\Hypertarget{class_model_a6e8ac9ed2d32a2e73ced0cea261d6ebb}\label{class_model_a6e8ac9ed2d32a2e73ced0cea261d6ebb} 
 \index{Model@{Model}!createModel@{createModel}}
 \index{createModel@{createModel}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{createModel()}{createModel()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} Model\+::create\+Model (\begin{DoxyParamCaption}\item[{const string}]{name = {\ttfamily \"{}\"{}},  }\item[{const double}]{time = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} Model\+::create\+Model (\begin{DoxyParamCaption}\item[{const string}]{name = {\ttfamily \"{}\"{}},  }\item[{const double}]{time = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Instantiates a model. 
+Create a new \doxylink{class_model}{Model}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em name} & give a name of model \\
+{\em name} & \doxylink{class_model}{Model} name \\
 \hline
-{\em time} & give a time od model \\
+{\em time} & \doxylink{class_model}{Model} initial time \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Model\texorpdfstring{$\ast$}{*}\+: The created model 
-\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_model_impl_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_model_impl_8cpp_source}{Model\+Impl.\+cpp}}.
+Definition at line \mbox{\hyperlink{_model_impl_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{_model_impl_8cpp_source}{Model\+Impl.\+cpp}}.
 
-\Hypertarget{class_model_a1ae8fbaec8a8ca6f67473280b0dee794}\label{class_model_a1ae8fbaec8a8ca6f67473280b0dee794} 
+\Hypertarget{class_model_a57e65c06daf587c511d00a091e4ff33d}\label{class_model_a57e65c06daf587c511d00a091e4ff33d} 
 \index{Model@{Model}!createSystem@{createSystem}}
 \index{createSystem@{createSystem}!Model@{Model}}
 \doxysubsubsection{\texorpdfstring{createSystem()}{createSystem()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} Model\+::create\+System (\begin{DoxyParamCaption}\item[{double}]{value = {\ttfamily 0},  }\item[{string}]{name = {\ttfamily \"{}\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} Model\+::create\+System (\begin{DoxyParamCaption}\item[{const string}]{name = {\ttfamily \"{}\"{}},  }\item[{const double}]{value = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Creates a \doxylink{class_system}{System} and add it to the model. 
+Create and add a \doxylink{class_system}{System} to the \doxylink{class_model}{Model}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & Initial value to the created system \\
+{\em name} & \doxylink{class_system}{System} name \\
 \hline
-{\em name} & Name to the created system \\
+{\em value} & \doxylink{class_system}{System} value id \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-System\texorpdfstring{$\ast$}{*}\+: The system that was just created 
-\end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{class_model_impl_a9998865b25d409e2282952a6a461f199}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{class_model_handle_a011654ac5f834dc74b0a6dcc059f446f}{Model\+Handle}}.
+
+\Hypertarget{class_model_af169eafea4fdbc5423b6d7f6cb83f8b5}\label{class_model_af169eafea4fdbc5423b6d7f6cb83f8b5} 
+\index{Model@{Model}!deleteFlow@{deleteFlow}}
+\index{deleteFlow@{deleteFlow}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{deleteFlow()}{deleteFlow()}}
+{\footnotesize\ttfamily virtual void Model\+::delete\+Flow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*}const}]{Flow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delete and remove a \doxylink{class_flow}{Flow} from the \doxylink{class_model}{Model}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_flow}{Flow}} & Pointer to \doxylink{class_flow}{Flow} to be deleted \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_model_handle_aaeb9505123614753be47631dcc118b7f}{Model\+Handle}}.
+
+\Hypertarget{class_model_a7c532713f89042ae312edc98818ec242}\label{class_model_a7c532713f89042ae312edc98818ec242} 
+\index{Model@{Model}!deleteModel@{deleteModel}}
+\index{deleteModel@{deleteModel}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{deleteModel()}{deleteModel()}}
+{\footnotesize\ttfamily void Model\+::delete\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*}const}]{Model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Delete and remove a \doxylink{class_model}{Model} from the \doxylink{class_model}{Model}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_model}{Model}} & Pointer to \doxylink{class_model}{Model} to be deleted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_model_impl_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{_model_impl_8cpp_source}{Model\+Impl.\+cpp}}.
+
+\Hypertarget{class_model_aa458f5c2be78bf8d4c8010a593db5315}\label{class_model_aa458f5c2be78bf8d4c8010a593db5315} 
+\index{Model@{Model}!deleteSystem@{deleteSystem}}
+\index{deleteSystem@{deleteSystem}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{deleteSystem()}{deleteSystem()}}
+{\footnotesize\ttfamily virtual void Model\+::delete\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}const}]{system }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delete and remove a \doxylink{class_system}{System} from the \doxylink{class_model}{Model}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em system} & Pointer to \doxylink{class_system}{System} to be deleted \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_model_handle_a00439882db1c47d64518b5db65698dfb}{Model\+Handle}}.
 
 \Hypertarget{class_model_a5e5ff4567eb5678b7cc74ab015af6dc4}\label{class_model_a5e5ff4567eb5678b7cc74ab015af6dc4} 
 \index{Model@{Model}!FlowBegin@{FlowBegin}}
@@ -241,7 +249,7 @@ vector$<$\+Flow\texorpdfstring{$\ast$}{*}$>$\+::iterator
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{class_model_impl_a59903678e4d9d82fb63df790706f439d}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{class_model_handle_aa9cd20a5c24397988a7193ad67242375}{Model\+Handle}}.
 
 \Hypertarget{class_model_af424f968d817b1ef91a3a3103be8ff7a}\label{class_model_af424f968d817b1ef91a3a3103be8ff7a} 
 \index{Model@{Model}!FlowEnd@{FlowEnd}}
@@ -258,7 +266,7 @@ vector$<$\+Flow\texorpdfstring{$\ast$}{*}$>$\+::iterator
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{class_model_impl_a6a5bef5df5b5f9f63248a7d8eac64069}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{class_model_handle_af98cbe6f4b1fe7d0fc90a87ede430192}{Model\+Handle}}.
 
 \Hypertarget{class_model_aa5365ab557ae47efffdf14ba7a46dac8}\label{class_model_aa5365ab557ae47efffdf14ba7a46dac8} 
 \index{Model@{Model}!getName@{getName}}
@@ -275,7 +283,7 @@ string\+: \doxylink{class_model}{Model} name
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{class_model_impl_a027d6617b69c45b92243c3caca352ba5}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{class_model_handle_a3c3020fc71844e75fc6e4672514b5205}{Model\+Handle}}.
 
 \Hypertarget{class_model_a41569269c162962571a791c0fe737bca}\label{class_model_a41569269c162962571a791c0fe737bca} 
 \index{Model@{Model}!getTime@{getTime}}
@@ -292,7 +300,41 @@ double\+: \doxylink{class_model}{Model} initial time
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{class_model_impl_ae3ff615e42e9c4822d13314ea3d48c5a}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{class_model_handle_a6bc583e6e319075a982e3a8f6213716a}{Model\+Handle}}.
+
+\Hypertarget{class_model_a14e55a6c5abb67bb0579f5f21fa845d6}\label{class_model_a14e55a6c5abb67bb0579f5f21fa845d6} 
+\index{Model@{Model}!ModelBegin@{ModelBegin}}
+\index{ModelBegin@{ModelBegin}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{ModelBegin()}{ModelBegin()}}
+{\footnotesize\ttfamily virtual vector$<$ \mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} $>$\+::iterator Model\+::\+Model\+Begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the First Iterator of the \doxylink{class_model}{Model} container. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Model\texorpdfstring{$\ast$}{*}$>$\+::iterator 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_model_handle_af66a8b78a57519c79f2303e75ee844e9}{Model\+Handle}}.
+
+\Hypertarget{class_model_a2d28e39ba7946fd92c768454792fbcef}\label{class_model_a2d28e39ba7946fd92c768454792fbcef} 
+\index{Model@{Model}!ModelEnd@{ModelEnd}}
+\index{ModelEnd@{ModelEnd}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{ModelEnd()}{ModelEnd()}}
+{\footnotesize\ttfamily virtual vector$<$ \mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} $>$\+::iterator Model\+::\+Model\+End (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the Last Iterator of the \doxylink{class_model}{Model} container. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Model\texorpdfstring{$\ast$}{*}$>$\+::iterator 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_model_handle_a3c72ee0f1c058c9fea5846d3f33c4108}{Model\+Handle}}.
 
 \Hypertarget{class_model_a9f2f8e2ed5f060daa56323cee71322e6}\label{class_model_a9f2f8e2ed5f060daa56323cee71322e6} 
 \index{Model@{Model}!run@{run}}
@@ -320,7 +362,7 @@ false\+: if it the simulation unsuccesful
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{class_model_impl_a6bd749d8d1672649da40a248d36f4655}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{class_model_handle_a7e42f164af673c242a45719c4dc323cf}{Model\+Handle}}.
 
 \Hypertarget{class_model_ad560875016688b7785bdbd0ef1a07d7a}\label{class_model_ad560875016688b7785bdbd0ef1a07d7a} 
 \index{Model@{Model}!setName@{setName}}
@@ -339,7 +381,7 @@ Set the Name object.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{class_model_impl_aa3b18d7c8f5ac0e11ddf488db1e834cb}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{class_model_handle_af7b71ab84c2dc44d1fb3b20b374dbbc9}{Model\+Handle}}.
 
 \Hypertarget{class_model_a6e775f65cfa1a0928b72db5e6427b512}\label{class_model_a6e775f65cfa1a0928b72db5e6427b512} 
 \index{Model@{Model}!setTime@{setTime}}
@@ -358,7 +400,7 @@ Set the Time object.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{class_model_impl_af4d7624c94e85aba4a4ddadcbe0c565e}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{class_model_handle_a722c62a665495150bb9b7e8aa2a28b5e}{Model\+Handle}}.
 
 \Hypertarget{class_model_aacb95c330f690ee3f0bb942ea9deaba0}\label{class_model_aacb95c330f690ee3f0bb942ea9deaba0} 
 \index{Model@{Model}!SystemBegin@{SystemBegin}}
@@ -375,7 +417,7 @@ vector$<$\+System\texorpdfstring{$\ast$}{*}$>$\+::iterator \+: First Iterator
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{class_model_impl_ac7afe156905417a68c5ba083234dabcd}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{class_model_handle_add363d7bb870c7dcd1b5552e2b46f8fa}{Model\+Handle}}.
 
 \Hypertarget{class_model_a956db91561813ecccc1c96827fd73c5d}\label{class_model_a956db91561813ecccc1c96827fd73c5d} 
 \index{Model@{Model}!SystemEnd@{SystemEnd}}
@@ -392,7 +434,7 @@ vector$<$\+System\texorpdfstring{$\ast$}{*}$>$\+::iterator
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{class_model_impl_a5a140740eb193248f6f2ca526f700b14}{Model\+Impl}}.
+Implemented in \mbox{\hyperlink{class_model_handle_a762a69b1787416fbcb5ce9e14e3ea8de}{Model\+Handle}}.
 
 
 

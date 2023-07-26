@@ -85,17 +85,21 @@ Inheritance diagram for Flow:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_flow__inherit__graph.png" border="0" usemap="#a_flow_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_flow_inherit__map" id="a_flow_inherit__map">
-<area shape="rect" title="Flow interface." alt="" coords="173,5,222,32"/>
-<area shape="rect" href="class_flow_impl.html" title="Class for FlowImpl representation." alt="" coords="161,80,234,107"/>
-<area shape="poly" title=" " alt="" coords="200,47,200,80,195,80,195,47"/>
-<area shape="rect" href="class_complex.html" title="Class for Complex representation that especifies FlowImpl." alt="" coords="5,155,78,181"/>
-<area shape="poly" title=" " alt="" coords="158,116,70,156,68,152,156,111"/>
-<area shape="rect" href="class_exponential.html" title="Class for Exponential representation that especifies FlowImpl." alt="" coords="102,155,192,181"/>
-<area shape="poly" title=" " alt="" coords="183,121,158,156,153,153,178,118"/>
-<area shape="rect" href="class_logistic.html" title="Class for Logistic representation that especifies FlowImpl." alt="" coords="215,155,281,181"/>
-<area shape="poly" title=" " alt="" coords="217,118,242,153,237,156,212,121"/>
-<area shape="rect" href="class_test_flow.html" title=" " alt="" coords="305,155,378,181"/>
-<area shape="poly" title=" " alt="" coords="237,111,317,152,315,156,234,116"/>
+<area shape="rect" title="Flow interface." alt="" coords="279,5,327,32"/>
+<area shape="rect" href="class_flow_handle.html" title=" " alt="" coords="259,80,347,107"/>
+<area shape="poly" title=" " alt="" coords="306,47,306,80,300,80,300,47"/>
+<area shape="rect" href="class_complex.html" title="Class for Complex representation that especifies FlowHandle." alt="" coords="5,155,78,181"/>
+<area shape="poly" title=" " alt="" coords="245,113,79,159,77,154,244,108"/>
+<area shape="rect" href="class_exponential.html" title="Class for Exponential representation that especifies FlowHandle." alt="" coords="102,155,192,181"/>
+<area shape="poly" title=" " alt="" coords="264,116,175,156,173,152,261,111"/>
+<area shape="rect" href="class_fluxo_exp.html" title=" " alt="" coords="215,155,292,181"/>
+<area shape="poly" title=" " alt="" coords="288,121,264,156,260,153,284,118"/>
+<area shape="rect" href="class_fluxo_log.html" title=" " alt="" coords="316,155,391,181"/>
+<area shape="poly" title=" " alt="" coords="322,118,347,153,343,156,318,121"/>
+<area shape="rect" href="class_logistic.html" title="Class for Logistic representation that especifies FlowHandle." alt="" coords="415,155,481,181"/>
+<area shape="poly" title=" " alt="" coords="342,111,424,152,421,156,340,116"/>
+<area shape="rect" href="class_test_flow.html" title=" " alt="" coords="505,155,578,181"/>
+<area shape="poly" title=" " alt="" coords="359,109,505,153,504,158,358,114"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -213,7 +217,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_flow_impl.html#a02919f28597a1a3ebfbb6eacce770898">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="class_flow_handle.html#a6e87515c8968db6955c947f17e26d190">FlowHandle</a>.</p>
 
 </div>
 </div>
@@ -243,7 +247,7 @@ Public Member Functions</h2></td></tr>
 <p>Execute the <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> equation Abstract method to be overriden. </p>
 <dl class="section return"><dt>Returns</dt><dd>double: <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> value after executing </dd></dl>
 
-<p>Implemented in <a class="el" href="class_flow_impl.html#a88d14f759988f1dcf393b83a93aea1f1">FlowImpl</a>, <a class="el" href="class_exponential.html#a964853e66548d52dced447ee180b0b3e">Exponential</a>, <a class="el" href="class_logistic.html#a7c9c146b7c74df11d41bd467641927e0">Logistic</a>, <a class="el" href="class_complex.html#a098f5eb821e1006f63ad252e16085c6a">Complex</a>, and <a class="el" href="class_test_flow.html#a6257ffbbc05952774d9768c7674dc536">TestFlow</a>.</p>
+<p>Implemented in <a class="el" href="class_fluxo_log.html#abec7deb305ddff371ffba750526a290f">FluxoLog</a>, <a class="el" href="class_fluxo_exp.html#a25213cffeace81f5ab8f123a0eff7e19">FluxoExp</a>, <a class="el" href="class_flow_handle.html#a4af8a4a490953bf061cf21d73528dc70">FlowHandle</a>, <a class="el" href="class_exponential.html#a964853e66548d52dced447ee180b0b3e">Exponential</a>, <a class="el" href="class_logistic.html#a7c9c146b7c74df11d41bd467641927e0">Logistic</a>, <a class="el" href="class_complex.html#a098f5eb821e1006f63ad252e16085c6a">Complex</a>, and <a class="el" href="class_test_flow.html#a6257ffbbc05952774d9768c7674dc536">TestFlow</a>.</p>
 
 </div>
 </div>
@@ -273,7 +277,7 @@ Public Member Functions</h2></td></tr>
 <p>Get the Destiny object. </p>
 <dl class="section return"><dt>Returns</dt><dd>System*: pointer to destiny <a class="el" href="class_system.html" title="System interface.">System</a> Interface </dd></dl>
 
-<p>Implemented in <a class="el" href="class_flow_impl.html#a633cf2d2cadcdc5a24f28e412366c8e1">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="class_flow_handle.html#ac75db9f09cda867d3ac9df83b692a9bf">FlowHandle</a>.</p>
 
 </div>
 </div>
@@ -303,7 +307,7 @@ Public Member Functions</h2></td></tr>
 <p>Get the Name object. </p>
 <dl class="section return"><dt>Returns</dt><dd>string: <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> name </dd></dl>
 
-<p>Implemented in <a class="el" href="class_flow_impl.html#a63453811afa24e0799e54e22161738a8">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="class_flow_handle.html#ae77a52225bdaf0bfd5b6b22f0769e428">FlowHandle</a>.</p>
 
 </div>
 </div>
@@ -333,7 +337,7 @@ Public Member Functions</h2></td></tr>
 <p>Get the Source object. </p>
 <dl class="section return"><dt>Returns</dt><dd>System*: pointer to source <a class="el" href="class_system.html" title="System interface.">System</a> Interface </dd></dl>
 
-<p>Implemented in <a class="el" href="class_flow_impl.html#a54940323059d2c4158f4146080841f32">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="class_flow_handle.html#a904492118494d6e5f69f94e7db86d097">FlowHandle</a>.</p>
 
 </div>
 </div>
@@ -363,7 +367,7 @@ Public Member Functions</h2></td></tr>
 <p>Get the Last Value object. </p>
 <dl class="section return"><dt>Returns</dt><dd>double: <a class="el" href="class_flow.html" title="Flow interface.">Flow</a> last value </dd></dl>
 
-<p>Implemented in <a class="el" href="class_flow_impl.html#a11af0c3c7576c45b7b66153623267e59">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="class_flow_handle.html#a918e7f9c87def3201d1e6ab058f2929f">FlowHandle</a>.</p>
 
 </div>
 </div>
@@ -399,7 +403,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_flow_impl.html#a6c10a21cdebcf6051068ac35b63f90e8">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="class_flow_handle.html#aa143a4e9d888362fce4a10b0069425a8">FlowHandle</a>.</p>
 
 </div>
 </div>
@@ -435,7 +439,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_flow_impl.html#a0487f9399ae9ff5a40915457e97b80b9">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="class_flow_handle.html#a2b46eef9eefe5ecf8092b18bda620f73">FlowHandle</a>.</p>
 
 </div>
 </div>
@@ -471,7 +475,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_flow_impl.html#a2690ee44103e90261b91635955122a5d">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="class_flow_handle.html#aaa4607884200c546fb7e30b50c655d49">FlowHandle</a>.</p>
 
 </div>
 </div>
@@ -507,7 +511,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_flow_impl.html#a28b3c4b23db663e2c9f2a1d5d10f1ce9">FlowImpl</a>.</p>
+<p>Implemented in <a class="el" href="class_flow_handle.html#a648b7a27b71540f5e4aba67d855c0cc5">FlowHandle</a>.</p>
 
 </div>
 </div>

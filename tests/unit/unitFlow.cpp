@@ -33,7 +33,7 @@ void unitFlowConstructor(void){
     assert(flow1->getSource() == NULL);
     assert(flow1->getDestiny() == NULL);
 
-    SystemImpl* sys1 = NULL, *sys2 = NULL;
+    System* sys1 = NULL, *sys2 = NULL;
     Flow *flow2 = new Complex("Flow", sys1, sys2);
     assert(flow2->getName() == "Flow");
     assert(flow2->getSource() == NULL);
@@ -65,7 +65,7 @@ void unitFlowSetName(void){
 }
 
 void unitFlowGetSource(void){
-    SystemImpl *sys = NULL;
+    System *sys = NULL;
     Flow *flow = new Complex("", sys);
 
     assert(flow->getSource() == sys);
@@ -75,7 +75,7 @@ void unitFlowGetSource(void){
 }
 
 void unitFlowSetSource(void){
-    SystemImpl *sys = NULL;
+    System *sys = NULL;
     Flow *flow = new Complex("");
 
     flow->setSource(sys);
@@ -87,7 +87,7 @@ void unitFlowSetSource(void){
 }
 
 void unitFlowGetDestiny(void){
-    SystemImpl *sys = NULL;
+    System *sys = NULL;
     Flow *flow = new Complex("", NULL, sys);
 
     assert(flow->getSource() == sys);
@@ -97,7 +97,7 @@ void unitFlowGetDestiny(void){
 }
 
 void unitFlowSetDestiny(void){
-    SystemImpl *sys = NULL;
+    System *sys = NULL;
     Flow *flow = new Complex("");
 
     flow->setSource(sys);
