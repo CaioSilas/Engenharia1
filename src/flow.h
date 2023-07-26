@@ -4,7 +4,7 @@
 #define FLOW_H
 
 #include <string>
-#include "System.h"
+#include "system.h"
 
 using namespace std;
 

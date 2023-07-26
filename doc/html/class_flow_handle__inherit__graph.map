@@ -1,0 +1,19 @@
+<map id="FlowHandle" name="FlowHandle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="259,80,347,107"/>
+<area shape="rect" id="Node000004" href="$class_complex.html" title="Class for Complex representation that especifies FlowHandle." alt="" coords="5,155,78,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="245,113,79,159,77,154,244,108"/>
+<area shape="rect" id="Node000005" href="$class_exponential.html" title="Class for Exponential representation that especifies FlowHandle." alt="" coords="102,155,192,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="264,116,175,156,173,152,261,111"/>
+<area shape="rect" id="Node000006" href="$class_fluxo_exp.html" title=" " alt="" coords="215,155,292,181"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="288,121,264,156,260,153,284,118"/>
+<area shape="rect" id="Node000007" href="$class_fluxo_log.html" title=" " alt="" coords="316,155,391,181"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="322,118,347,153,343,156,318,121"/>
+<area shape="rect" id="Node000008" href="$class_logistic.html" title="Class for Logistic representation that especifies FlowHandle." alt="" coords="415,155,481,181"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="342,111,424,152,421,156,340,116"/>
+<area shape="rect" id="Node000009" href="$class_test_flow.html" title=" " alt="" coords="505,155,578,181"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="359,109,505,153,504,158,358,114"/>
+<area shape="rect" id="Node000002" href="$class_flow.html" title="Flow interface." alt="" coords="221,5,270,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,42,295,78,291,81,263,46"/>
+<area shape="rect" id="Node000003" href="$class_handle.html" title=" " alt="" coords="293,5,430,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="344,45,315,81,311,78,340,42"/>
+</map>

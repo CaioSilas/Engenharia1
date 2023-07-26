@@ -9,12 +9,14 @@
 #include <cassert>
 #include <cstdlib>
 
+
+
 /**
- * @brief Class for Exponential representation that especifies FlowImpl
+ * @brief Class for Exponential representation that especifies FlowHandle
  * 
  */
 
-class Exponential : public FlowImpl{
+class Exponential : public FlowHandle{
     public:
 
         /**
@@ -24,24 +26,24 @@ class Exponential : public FlowImpl{
 	     * @param source Pointer to source System
          * @param destiny Pointer to destiny System
 	     */
-        Exponential(const string name = "", System* source = NULL, System* destiny = NULL) : FlowImpl(name, source, destiny) {}
+        Exponential(const string name = "", System* source = NULL, System* destiny = NULL) : FlowHandle(name, source, destiny) {}
 
         /**
-         * @brief Execute the FlowImpl equation
+         * @brief Execute the FlowHandle equation
          * 
          * @return double: result of equation 
          */
         virtual double execute(void){
-            return 0.01 * source->getValue();
+            return 0.01 * (pImpl_->getSource())->getValue();
         }
 };
 
 /**
- * @brief Class for Logistic representation that especifies FlowImpl
+ * @brief Class for Logistic representation that especifies FlowHandle
  * 
  */
 
-class Logistic : public FlowImpl{
+class Logistic : public FlowHandle{
     public:
 
         /**
@@ -51,24 +53,24 @@ class Logistic : public FlowImpl{
 	     * @param source Pointer to source System
          * @param destiny Pointer to destiny System
 	     */
-        Logistic(const string name = "", System* source = NULL, System* destiny = NULL) : FlowImpl(name, source, destiny) {}
+        Logistic(const string name = "", System* source = NULL, System* destiny = NULL) : FlowHandle(name, source, destiny) {}
 
         /**
-         * @brief Execute the FlowImpl equation
+         * @brief Execute the FlowHandle equation
          * 
          * @return double: result of equation 
          */
         virtual double execute(void){
-            return 0.01 * (destiny->getValue())*(1-(destiny->getValue())/70);
+            return 0.01 * ((pImpl_->getDestiny())->getValue())*(1-((pImpl_->getDestiny())->getValue())/70);
         }
 };
 
 /**
- * @brief Class for Complex representation that especifies FlowImpl
+ * @brief Class for Complex representation that especifies FlowHandle
  * 
  */
 
-class Complex : public FlowImpl{
+class Complex : public FlowHandle{
     public:
 
         /**
@@ -78,15 +80,15 @@ class Complex : public FlowImpl{
 	     * @param source Pointer to source System
          * @param destiny Pointer to destiny System
 	     */
-        Complex(const string name = "", System* source = NULL, System* destiny = NULL) : FlowImpl(name, source, destiny) {}
+        Complex(const string name = "", System* source = NULL, System* destiny = NULL) : FlowHandle(name, source, destiny) {}
 
         /**
-         * @brief Execute the FlowImpl equation
+         * @brief Execute the FlowHandle equation
          * 
          * @return double: result of equation 
          */
         virtual double execute(void){
-            return 0.01 * source->getValue();
+            return 0.01 * (pImpl_->getSource())->getValue();
         }
 };
 

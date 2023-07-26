@@ -1,0 +1,127 @@
+\doxysection{Handle\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_handle}{}\label{class_handle}\index{Handle$<$ T $>$@{Handle$<$ T $>$}}
+
+
+The classes \doxylink{class_handle}{Handle} and \doxylink{class_body}{Body} implements the \"{}bridge\"{} design pattern (also known as \"{}handle/body idiom\"{}).  
+
+
+
+
+{\ttfamily \#include $<$handle\+Body\+Sem\+Debug.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_handle_a6a72028918adf79c0ff8d9996e5e4107}{Handle}} ()
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_handle_addd59fdf43baa517a06d44e1125b5ab1}{\texorpdfstring{$\sim$}{\string~}\+Handle}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_handle_af304e7014a2e600e235140d246783f85}{Handle}} (const \mbox{\hyperlink{class_handle}{Handle}} \&hd)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_handle}{Handle}}$<$ T $>$ \& \mbox{\hyperlink{class_handle_a52e146e2a1427c8e7d3a692e9378185a}{operator=}} (const \mbox{\hyperlink{class_handle}{Handle}} \&hd)
+\begin{DoxyCompactList}\small\item\em assignment operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{p\+Impl\+\_\+}}
+\begin{DoxyCompactList}\small\item\em refer{\ucr}ncia para a implementa{\ucr}{\ucr}o \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Handle$<$ T $>$}
+The classes \doxylink{class_handle}{Handle} and \doxylink{class_body}{Body} implements the \"{}bridge\"{} design pattern (also known as \"{}handle/body idiom\"{}). 
+
+
+
+Definition at line \mbox{\hyperlink{handle_body_sem_debug_8h_source_l00020}{20}} of file \mbox{\hyperlink{handle_body_sem_debug_8h_source}{handle\+Body\+Sem\+Debug.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_handle_a6a72028918adf79c0ff8d9996e5e4107}\label{class_handle_a6a72028918adf79c0ff8d9996e5e4107} 
+\index{Handle$<$ T $>$@{Handle$<$ T $>$}!Handle@{Handle}}
+\index{Handle@{Handle}!Handle$<$ T $>$@{Handle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Handle()}{Handle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_handle}{Handle}}$<$ T $>$\mbox{\hyperlink{class_handle}{\+::\+Handle}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor 
+
+
+
+Definition at line \mbox{\hyperlink{handle_body_sem_debug_8h_source_l00001}{1}} of file \mbox{\hyperlink{handle_body_sem_debug_8h_source}{handle\+Body\+Sem\+Debug.\+h}}.
+
+\Hypertarget{class_handle_addd59fdf43baa517a06d44e1125b5ab1}\label{class_handle_addd59fdf43baa517a06d44e1125b5ab1} 
+\index{Handle$<$ T $>$@{Handle$<$ T $>$}!````~Handle@{\texorpdfstring{$\sim$}{\string~}Handle}}
+\index{````~Handle@{\texorpdfstring{$\sim$}{\string~}Handle}!Handle$<$ T $>$@{Handle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Handle()}{\string~Handle()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual \mbox{\hyperlink{class_handle}{Handle}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_handle}{Handle}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+Definition at line \mbox{\hyperlink{handle_body_sem_debug_8h_source_l00001}{1}} of file \mbox{\hyperlink{handle_body_sem_debug_8h_source}{handle\+Body\+Sem\+Debug.\+h}}.
+
+\Hypertarget{class_handle_af304e7014a2e600e235140d246783f85}\label{class_handle_af304e7014a2e600e235140d246783f85} 
+\index{Handle$<$ T $>$@{Handle$<$ T $>$}!Handle@{Handle}}
+\index{Handle@{Handle}!Handle$<$ T $>$@{Handle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Handle()}{Handle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_handle}{Handle}}$<$ T $>$\mbox{\hyperlink{class_handle}{\+::\+Handle}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_handle}{Handle}}$<$ T $>$ \&}]{hd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+copy constructor 
+
+
+
+Definition at line \mbox{\hyperlink{handle_body_sem_debug_8h_source_l00001}{1}} of file \mbox{\hyperlink{handle_body_sem_debug_8h_source}{handle\+Body\+Sem\+Debug.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_handle_a52e146e2a1427c8e7d3a692e9378185a}\label{class_handle_a52e146e2a1427c8e7d3a692e9378185a} 
+\index{Handle$<$ T $>$@{Handle$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Handle$<$ T $>$@{Handle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_handle}{Handle}}$<$ T $>$ \& \mbox{\hyperlink{class_handle}{Handle}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_handle}{Handle}}$<$ T $>$ \&}]{hd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+assignment operator 
+
+
+
+Definition at line \mbox{\hyperlink{handle_body_sem_debug_8h_source_l00038}{38}} of file \mbox{\hyperlink{handle_body_sem_debug_8h_source}{handle\+Body\+Sem\+Debug.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_handle_a16021e57596d7369dfa1a9fadc35c06f}\label{class_handle_a16021e57596d7369dfa1a9fadc35c06f} 
+\index{Handle$<$ T $>$@{Handle$<$ T $>$}!pImpl\_@{pImpl\_}}
+\index{pImpl\_@{pImpl\_}!Handle$<$ T $>$@{Handle$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pImpl\_}{pImpl\_}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_handle}{Handle}}$<$ T $>$\+::p\+Impl\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+refer{\ucr}ncia para a implementa{\ucr}{\ucr}o 
+
+
+
+Definition at line \mbox{\hyperlink{handle_body_sem_debug_8h_source_l00050}{50}} of file \mbox{\hyperlink{handle_body_sem_debug_8h_source}{handle\+Body\+Sem\+Debug.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{handle_body_sem_debug_8h}{handle\+Body\+Sem\+Debug.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\doxysection{main.\+cpp}
+\hypertarget{main_8cpp_source}{}\label{main_8cpp_source}\index{tests/main.cpp@{tests/main.cpp}}
+\mbox{\hyperlink{main_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}../src/ModelImpl.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}../src/FlowImpl.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}../src/SystemImpl.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00008}\mbox{\hyperlink{main_8cpp_aeff79046387df0de04e7de11061a704b}{00008}}\ \textcolor{preprocessor}{\#define\ DEBUGING}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#ifdef\ DEBUGING}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}\mbox{\hyperlink{main_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{00010}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}\mbox{\hyperlink{main_8cpp_a01128a06118f949a0b24a3d080f515fd}{00011}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}\mbox{\hyperlink{main_8cpp_ac1322042429ed9724fbef55908244f3b}{00012}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00013}\mbox{\hyperlink{main_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{00013}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}00016\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}\mbox{\hyperlink{class_fluxo_log}{00018}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_fluxo_log}{FluxoLog}}:\textcolor{keyword}{public}\ \mbox{\hyperlink{class_flow_handle}{FlowHandle}}\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00019}00019\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00020}\mbox{\hyperlink{class_fluxo_log_a72dc4704fdb04b83f55f3e9d22e91f4c}{00020}}\ \ \ \ \ \mbox{\hyperlink{class_fluxo_log_a72dc4704fdb04b83f55f3e9d22e91f4c}{FluxoLog}}(\textcolor{keywordtype}{string}\ name\ =\ \textcolor{stringliteral}{"{}"{}},\ \mbox{\hyperlink{class_system}{System}}*\ source\ =\ NULL,\ \mbox{\hyperlink{class_system}{System}}*\ destiny\ =\ NULL):\mbox{\hyperlink{class_flow_handle}{FlowHandle}}(name,\ source,\ destiny)\{\};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//FluxoLog(System*\ ori,System*\ des):FlowImpl(ori,des)\{\};}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}\mbox{\hyperlink{class_fluxo_log_abec7deb305ddff371ffba750526a290f}{00022}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_fluxo_log_abec7deb305ddff371ffba750526a290f}{execute}}()\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ q\ =\ (\mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{class_flow_impl_a633cf2d2cadcdc5a24f28e412366c8e1}{getDestiny}}())-\/>\mbox{\hyperlink{class_flow_handle_a918e7f9c87def3201d1e6ab058f2929f}{getValue}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ q*(0.3*(1-\/(q/70)));;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025\ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026\ \};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}\mbox{\hyperlink{class_fluxo_exp}{00028}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_fluxo_exp}{FluxoExp}}:\textcolor{keyword}{public}\ \mbox{\hyperlink{class_flow_handle}{FlowHandle}}\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}\mbox{\hyperlink{class_fluxo_exp_ab44443a6b09d705ad293641d8eb87c9f}{00030}}\ \ \ \ \mbox{\hyperlink{class_fluxo_exp_ab44443a6b09d705ad293641d8eb87c9f}{FluxoExp}}(\textcolor{keywordtype}{string}\ name\ =\ \textcolor{stringliteral}{"{}"{}},\ \mbox{\hyperlink{class_system}{System}}*\ source\ =\ NULL,\ \mbox{\hyperlink{class_system}{System}}*\ destiny\ =\ NULL):\mbox{\hyperlink{class_flow_handle}{FlowHandle}}(name,\ source,\ destiny)\{\};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}00031\ \ \ \ \textcolor{comment}{//FluxoExp(System\ *ori,System\ *des):FlowImpl(ori,des)\{\};}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}\mbox{\hyperlink{class_fluxo_exp_a25213cffeace81f5ab8f123a0eff7e19}{00032}}\ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_fluxo_exp_a25213cffeace81f5ab8f123a0eff7e19}{execute}}()\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>\mbox{\hyperlink{class_flow_impl_a633cf2d2cadcdc5a24f28e412366c8e1}{getDestiny}}())-\/>getValue()*0.3;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00034}00034\ \ \ \ \}\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}00035\ \};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}\mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00037}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{funcional_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{comment}{//\ Apenas\ a\ implementacao\ da\ classe\ "{}Flux"{}\ precisa\ ser\ conhecida\ na}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ fase\ de\ "{}cria{\ucr}{\ucr}o\ de\ objetos"{},\ pois\ o\ usu{\ucr}rio\ precisa\ implementar\ }}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ v{\ucr}rios\ tipos\ de\ fluxo.\ Ent{\ucr}o,\ o\ m{\ucr}dulo\ de\ cria{\ucr}{\ucr}o\ de\ objetos\ precisa}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ conhecer\ os\ fluxos\ implementados\ pelo\ usu{\ucr}rio.No\ entanto,\ nenhuma\ outra\ }}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ implementa{\ucr}{\ucr}o\ precisa\ ser\ conhecida\ por\ qq\ outro\ m{\ucr}dulo.}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{comment}{//\ Cria\ modelo}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046\ \ \ \ \ \mbox{\hyperlink{class_model}{Model}}*\ m\ =\ \mbox{\hyperlink{class_model_a6e8ac9ed2d32a2e73ced0cea261d6ebb}{Model::createModel}}(\textcolor{stringliteral}{"{}Modelo\ de\ Pop."{}});\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{class_flow}{Flow}}*\ f1\ =\ m-\/>\mbox{\hyperlink{class_model_a5e73f0088bb05d073bc8612d8c08a75e}{createFlow}}<\mbox{\hyperlink{class_fluxo_log}{FluxoLog}}>(\textcolor{stringliteral}{"{}nascimento"{}});\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ USANDO\ REFERENCIAS\ PARA\ INTERFACE\ (CLASSE\ ABSTRATA)}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//System\&\ s1\ =\ m.createSystem("{}populacao"{},10.0);}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//System\&\ s2\ =\ m.createSystem("{}Teste"{},\ 7.90)\ \ \ ;}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}s1:\ "{}\ <<\ s1.getName()\ <<\ "{},\ s2:\ "{}\ <<\ \ s2.getName()\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//s1\ =\ s2;\ \ //\ nao\ funciona\ pq\ s1\ {\ucr}\ uma\ referencia,\ portanto\ nao\ pode\ ser\ redefinida}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}s1:\ "{}\ <<\ s1.getName()\ <<\ "{},\ s2:\ "{}\ <<\ \ s2.getName()\ <<\ endl;\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ USANDO\ PONTEIROS\ PARA\ INTERFACE\ (CLASSE\ ABSTRATA)}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}*\ s1\ =\ m-\/>\mbox{\hyperlink{class_model_a57e65c06daf587c511d00a091e4ff33d}{createSystem}}(\textcolor{stringliteral}{"{}populacao"{}},10.0);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}*\ s2\ =\ m-\/>\mbox{\hyperlink{class_model_a57e65c06daf587c511d00a091e4ff33d}{createSystem}}(\textcolor{stringliteral}{"{}Teste"{}},\ 7.90)\ \ \ ;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00059}00059\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}s1:\ "{}}\ <<\ s1-\/>\mbox{\hyperlink{class_system_ab4f23c21832d6bbef462a5a20b296912}{getName}}()\ <<\ \textcolor{stringliteral}{"{},\ s2:\ "{}}\ <<\ \ s2-\/>\mbox{\hyperlink{class_system_ab4f23c21832d6bbef462a5a20b296912}{getName}}()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{comment}{//s1\ =\ s2;}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00061}00061\ \ \ \ \ *s1\ =\ *s2;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00062}00062\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}s1:\ "{}}\ <<\ s1-\/>\mbox{\hyperlink{class_system_ab4f23c21832d6bbef462a5a20b296912}{getName}}()\ <<\ \textcolor{stringliteral}{"{},\ s2:\ "{}}\ <<\ \ s2-\/>\mbox{\hyperlink{class_system_ab4f23c21832d6bbef462a5a20b296912}{getName}}()\ <<\ endl;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00063}00063\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}s1:\ "{}}\ <<\ s1\ <<\ \textcolor{stringliteral}{"{},\ s2:\ "{}}\ <<\ \ s2\ <<\ endl;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00064}00064\ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00065}00065\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//\ Fa{\ucr}a\ o\ teste\ COM\ e\ SEM\ as\ chaves\ abaixo}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00067}00067\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ USANDO\ OBJETOS\ HANDLES\ (DELEGA{\ucr}{\ucr}O)}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00069}00069\ \ \ \ \ \mbox{\hyperlink{class_system_handle}{SystemHandle}}\ s3(\textcolor{stringliteral}{"{}tiago"{}},\ 7),\ s4(\textcolor{stringliteral}{"{}antonio"{}},\ 8);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00070}00070\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}s3:\ "{}}\ <<\ s3.getName()\ <<\ \textcolor{stringliteral}{"{},\ s4:\ "{}}\ <<\ \ s4.\mbox{\hyperlink{class_system_handle_ae37239ae5e5cf80d0c6ace26aa716ab8}{getName}}()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00071}00071\ \ \ \ \ s3\ =\ s4;\ \ \textcolor{comment}{//\ comente\ esta\ linha\ e\ veja\ que\ o\ resultado\ muda}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00072}00072\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}s3:\ "{}}\ <<\ s3.\mbox{\hyperlink{class_system_handle_ae37239ae5e5cf80d0c6ace26aa716ab8}{getName}}()\ <<\ \textcolor{stringliteral}{"{},\ s4:\ "{}}\ <<\ \ s4.\mbox{\hyperlink{class_system_handle_ae37239ae5e5cf80d0c6ace26aa716ab8}{getName}}()\ <<\ endl;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00073}00073\ \ \ \ \ s3\ =\ s3;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00074}00074\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}s3:\ "{}}\ <<\ s3.getName()\ <<\ \textcolor{stringliteral}{"{},\ s4:\ "{}}\ <<\ \ s4.\mbox{\hyperlink{class_system_handle_ae37239ae5e5cf80d0c6ace26aa716ab8}{getName}}()\ <<\ endl;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00075}00075\ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//\ Monta\ Modelo}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//m.setTarget(f1,\ s1);}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00078}00078\ \ \ \ \ f1-\/>\mbox{\hyperlink{class_flow_a4eb5e8714d7972d31d3b8c3b03b196e8}{setDestiny}}(s1);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00079}00079\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00080}00080\ \ \ \ \ \textcolor{comment}{//\ executa\ o\ modelo}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00081}00081\ \ \ \ \ m-\/>\mbox{\hyperlink{class_model_a9f2f8e2ed5f060daa56323cee71322e6}{run}}(0,30,1);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00083}00083\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{comment}{//\ imprime\ relatorio}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00085}00085\ \ \ \ \ \textcolor{comment}{//cout\ <<\ s1.getValue()\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00086}00086\ \ \ \ \ cout\ <<\ s1-\/>getValue()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00087}00087\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Created\ handles:\ "{}}\ \ <<\ \mbox{\hyperlink{main_8cpp_aac78cb29dfe4a565da68073b0beebf2f}{numHandleCreated}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00088}00088\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Deleted\ handles:\ "{}}\ \ <<\ \mbox{\hyperlink{main_8cpp_a01128a06118f949a0b24a3d080f515fd}{numHandleDeleted}}\ <<\ endl;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00089}00089\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Created\ bodies:\ "{}}\ \ <<\ \mbox{\hyperlink{main_8cpp_ac1322042429ed9724fbef55908244f3b}{numBodyCreated}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00090}00090\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Deleted\ bodies:\ "{}}\ \ <<\ \mbox{\hyperlink{main_8cpp_aba38ebae7f83ef57afab8c447dddb6cf}{numBodyDeleted}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00091}00091\ \ \ \ \ system(\textcolor{stringliteral}{"{}PAUSE"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_SUCCESS;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00093}00093\ \}}
+
+\end{DoxyCode}

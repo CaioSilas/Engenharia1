@@ -1,0 +1,68 @@
+\doxysection{handle\+Body\+Sem\+Debug.\+h}
+\hypertarget{handle_body_sem_debug_8h_source}{}\label{handle_body_sem_debug_8h_source}\index{src/handleBodySemDebug.h@{src/handleBodySemDebug.h}}
+\mbox{\hyperlink{handle_body_sem_debug_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00001}\mbox{\hyperlink{class_handle_a6a72028918adf79c0ff8d9996e5e4107}{00001}}\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00009}00009\ \textcolor{preprocessor}{\#if\ !\ defined(\ HANDLE\_BODY\ )}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00010}00010\ \textcolor{preprocessor}{\#define\ HANDLE\_BODY}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00019}00019\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00020}\mbox{\hyperlink{class_handle}{00020}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_handle}{Handle}}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00023}00023\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_handle}{Handle<T>}}(\ )\{\ \ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}\ =\ \textcolor{keyword}{new}\ T;\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>attach();\ \ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00030}00030\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_handle}{\string~Handle<T>}}()\{\ \mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>detach();\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{class_handle}{Handle<T>}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_handle}{Handle}}\&\ hd\ ):\mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}(\ hd.\mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}\ )\ \{\ \mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>attach();\ \ \}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00038}\mbox{\hyperlink{class_handle_a52e146e2a1427c8e7d3a692e9378185a}{00038}}\ \ \ \ \ \mbox{\hyperlink{class_handle}{Handle<T>}}\&\ \mbox{\hyperlink{class_handle_a52e146e2a1427c8e7d3a692e9378185a}{operator=}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_handle}{Handle}}\&\ hd)\ \{}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ \ \textcolor{keyword}{this}\ !=\ \&hd\ )}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ hd.\mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>attach();}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}-\/>detach();\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}}\ \ =\ hd.\mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}};}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00047}00047\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00050}\mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{00050}}\ \ \ \ \ T\ *\mbox{\hyperlink{class_handle_a16021e57596d7369dfa1a9fadc35c06f}{pImpl\_}};\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00051}00051\ \};}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00060}\mbox{\hyperlink{class_body}{00060}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_body}{Body}}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00061}00061\ \{\ \ \ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00062}00062\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00064}\mbox{\hyperlink{class_body_a7727b0d8c998bbc2942e4c802e31e2eb}{00064}}\ \ \ \ \ \mbox{\hyperlink{class_body_a7727b0d8c998bbc2942e4c802e31e2eb}{Body}}():\ refCount\_\ (\ 0\ )\{\ \ \}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00065}00065\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00068}\mbox{\hyperlink{class_body_a5d53322c76a6952d096cb7564ac86db1}{00068}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_body_a5d53322c76a6952d096cb7564ac86db1}{attach}}\ ()\ \ \ \ \{\ refCount\_++;\ \}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00072}\mbox{\hyperlink{class_body_ad481d0c8368db318795c9a0a8fdd3717}{00072}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_body_ad481d0c8368db318795c9a0a8fdd3717}{detach}}\ ()\{\ \ \ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ -\/-\/refCount\_\ ==\ 0\ )\ \{\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \textcolor{keyword}{this};\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00079}\mbox{\hyperlink{class_body_a59ae961812625b8636071ba61b1a75fc}{00079}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_body_a59ae961812625b8636071ba61b1a75fc}{refCount}}()\{\ \textcolor{keywordflow}{return}\ refCount\_;\ \}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00082}\mbox{\hyperlink{class_body_a9b15e54cf881ac0ca64790ca1d50110e}{00082}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_body_a9b15e54cf881ac0ca64790ca1d50110e}{\string~Body}}()\{\}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00084}00084\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{class_body_a7727b0d8c998bbc2942e4c802e31e2eb}{Body}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_body}{Body}}\&);}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00090}00090\ \ \ \ \ \mbox{\hyperlink{class_body}{Body}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_body}{Body}}\&)\{\textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};\}}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00092}00092\ \ \ \ \ \textcolor{keywordtype}{int}\ refCount\_;\ \ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00094}00094\ \};}
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{handle_body_sem_debug_8h_source_l00096}00096\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

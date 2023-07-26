@@ -5,6 +5,7 @@
 
 #include <string>
 #include "System.h"
+#include "handleBodySemDebug.h"
 
 using namespace std;
 
@@ -13,15 +14,8 @@ using namespace std;
  * 
  */
 
-class SystemImpl : public System{
+class SystemImpl : public Body{
     public:
-
-		/**
-		* @brief Creates empty system
-		*  
-		*/
-		SystemImpl();
-	
         /**
 	     * @brief Construct a new SystemImpl object
 	     * 
@@ -85,6 +79,32 @@ class SystemImpl : public System{
          * @return SystemImpl&: return the copy
          */
         SystemImpl& operator=(const SystemImpl& rhs); 
+};
+
+class SystemHandle : public System, public Handle<SystemImpl>{
+	public:
+		SystemHandle(string name = "", double value = 0){
+			pImpl_->setName(name);
+			pImpl_->setValue(value);
+		}
+
+		virtual ~SystemHandle() {}
+
+		void setValue(const double value) {
+			return pImpl_->setValue(value);
+		}
+
+		void setName(const string name) {
+			return pImpl_->setName(name);
+		}
+
+		double getValue(void) const {
+			return pImpl_->getValue();
+		}
+
+		string getName(void) const {
+			return pImpl_->getName();
+		}
 };
 
 #endif /* SystemImpl_H */

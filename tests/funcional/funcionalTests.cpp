@@ -11,8 +11,8 @@
 void exponentialFuncionalTest(){
 
     Model* m1 = Model::createModel("model",0);
-    System* pop1 = m1->createSystem(100,"pop1");
-    System* pop2 = m1->createSystem(0,"pop2");
+    System* pop1 = m1->createSystem("pop1",100);
+    System* pop2 = m1->createSystem("pop2",0);
     m1->createFlow<Exponential>("exponencial", pop1, pop2);
 
     
@@ -32,8 +32,8 @@ void logisticalFuncionalTest(){
 
 
     Model *m1 = Model::createModel("model1",0);
-    System *p1 = m1->createSystem(100,"p1");
-    System *p2 = m1->createSystem(10,"p2");
+    System *p1 = m1->createSystem("p1",100);
+    System *p2 = m1->createSystem("p2",10);
     m1->createFlow<Logistic>("logistic",p1,p2);
 
     m1->run(0,100,1);
@@ -48,11 +48,11 @@ void complexFuncionalTest(){
 
     Model* m1 = Model::createModel("model1",0);
 
-    System *Q1 = m1->createSystem(100,"Q1");
-    System *Q2 = m1->createSystem(0,"Q2"); 
-    System *Q3 = m1->createSystem(100,"Q3"); 
-    System *Q4 = m1->createSystem(0,"Q4"); 
-    System *Q5 = m1->createSystem(0,"Q5"); 
+    System *Q1 = m1->createSystem("Q1",100);
+    System *Q2 = m1->createSystem("Q2",0); 
+    System *Q3 = m1->createSystem("Q3",100); 
+    System *Q4 = m1->createSystem("Q4",0); 
+    System *Q5 = m1->createSystem("Q5",0); 
 
     m1->createFlow<Complex>("f",Q1,Q2);
     m1->createFlow<Complex>("g",Q1,Q3);

@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['execute_0',['execute',['../class_flow.html#a619be0b590c78202127bc6ac7fb04029',1,'Flow::execute()'],['../class_flow_impl.html#a88d14f759988f1dcf393b83a93aea1f1',1,'FlowImpl::execute()'],['../class_exponential.html#a964853e66548d52dced447ee180b0b3e',1,'Exponential::execute()'],['../class_logistic.html#a7c9c146b7c74df11d41bd467641927e0',1,'Logistic::execute()'],['../class_complex.html#a098f5eb821e1006f63ad252e16085c6a',1,'Complex::execute()'],['../class_test_flow.html#a6257ffbbc05952774d9768c7674dc536',1,'TestFlow::execute()']]],
-  ['exponential_1',['Exponential',['../class_exponential.html',1,'Exponential'],['../class_exponential.html#a809351b860261e5e8c692064a353eb30',1,'Exponential::Exponential()']]],
-  ['exponentialfuncionaltest_2',['exponentialFuncionalTest',['../funcional_tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27',1,'exponentialFuncionalTest():&#160;funcionalTests.cpp'],['../funcional_tests_8h.html#a2c448ffaffdff4b03c825a01dffa6f27',1,'exponentialFuncionalTest():&#160;funcionalTests.cpp']]]
+  ['debuging_0',['DEBUGING',['../main_8cpp.html#aeff79046387df0de04e7de11061a704b',1,'main.cpp']]],
+  ['deleteflow_1',['deleteFlow',['../class_model.html#af169eafea4fdbc5423b6d7f6cb83f8b5',1,'Model::deleteFlow()'],['../class_model_impl.html#a4a5c247a175a7bf8a9257f603ab8b9e0',1,'ModelImpl::deleteFlow()'],['../class_model_handle.html#aaeb9505123614753be47631dcc118b7f',1,'ModelHandle::deleteFlow()']]],
+  ['deletemodel_2',['deleteModel',['../class_model.html#a7c532713f89042ae312edc98818ec242',1,'Model::deleteModel()'],['../class_model_impl.html#a0fe23646244e71b4ade913d1c552581f',1,'ModelImpl::deleteModel()']]],
+  ['deletesystem_3',['deleteSystem',['../class_model.html#aa458f5c2be78bf8d4c8010a593db5315',1,'Model::deleteSystem()'],['../class_model_impl.html#ad31eb9602c78b87707a112585520ff06',1,'ModelImpl::deleteSystem()'],['../class_model_handle.html#a00439882db1c47d64518b5db65698dfb',1,'ModelHandle::deleteSystem()']]],
+  ['destiny_4',['destiny',['../class_flow_impl.html#a82ba7e99ef0e7346c95a7240a925c5b5',1,'FlowImpl']]],
+  ['detach_5',['detach',['../class_body.html#ad481d0c8368db318795c9a0a8fdd3717',1,'Body']]]
 ];

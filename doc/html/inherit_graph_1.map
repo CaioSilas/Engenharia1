@@ -1,5 +1,19 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_model.html" title="Class for Model Interface representation." alt="" coords="5,5,62,32"/>
-<area shape="rect" id="Node000001" href="$class_model_impl.html" title="Class for ModelImpl representation." alt="" coords="110,5,190,32"/>
-<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="76,16,109,16,109,21,76,21"/>
+<area shape="rect" id="Node000000" href="$class_flow.html" title="Flow interface." alt="" coords="49,107,98,133"/>
+<area shape="rect" id="Node000001" href="$class_flow_handle.html" title=" " alt="" coords="190,132,278,159"/>
+<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="113,123,190,136,189,141,112,129"/>
+<area shape="rect" id="Node000002" href="$class_complex.html" title="Class for Complex representation that especifies FlowHandle." alt="" coords="335,5,407,32"/>
+<area shape="poly" id="edge5_Node000001_Node000002" title=" " alt="" coords="252,118,284,81,324,42,341,30,344,35,328,46,288,84,256,122"/>
+<area shape="rect" id="Node000003" href="$class_exponential.html" title="Class for Exponential representation that especifies FlowHandle." alt="" coords="326,56,415,83"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="271,122,344,81,346,86,273,127"/>
+<area shape="rect" id="Node000004" href="$class_fluxo_exp.html" title=" " alt="" coords="333,107,409,133"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="292,132,332,124,333,130,293,137"/>
+<area shape="rect" id="Node000005" href="$class_fluxo_log.html" title=" " alt="" coords="334,157,408,184"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="293,154,333,161,332,166,292,159"/>
+<area shape="rect" id="Node000006" href="$class_logistic.html" title="Class for Logistic representation that especifies FlowHandle." alt="" coords="338,208,404,235"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="273,164,346,205,344,210,271,168"/>
+<area shape="rect" id="Node000007" href="$class_test_flow.html" title=" " alt="" coords="334,259,407,285"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="256,169,288,206,328,245,344,256,341,260,324,249,284,210,252,172"/>
+<area shape="rect" id="Node000008" href="$class_handle.html" title=" " alt="" coords="5,157,142,184"/>
+<area shape="poly" id="edge11_Node000008_Node000001" title=" " alt="" coords="156,155,189,150,190,155,157,160"/>
 </map>

@@ -1,0 +1,15 @@
+<map id="FluxoExp" name="FluxoExp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="29,355,105,381"/>
+<area shape="rect" id="Node000002" href="$class_flow_handle.html" title=" " alt="" coords="23,279,111,305"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,320,70,354,64,354,64,320"/>
+<area shape="rect" id="Node000003" href="$class_flow.html" title="Flow interface." alt="" coords="5,203,54,229"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="45,241,63,277,58,280,40,244"/>
+<area shape="rect" id="Node000004" href="$class_handle.html" title=" " alt="" coords="77,203,214,229"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="123,242,82,280,78,276,120,238"/>
+<area shape="rect" id="Node000005" href="$class_flow_impl.html" title="Class for FlowImpl representation." alt="" coords="109,112,182,139"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="148,154,148,202,143,202,143,154"/>
+<area shape="rect" id="Node000006" href="$class_body.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="79,5,130,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="117,44,143,111,138,113,112,46"/>
+<area shape="rect" id="Node000007" href="$class_system.html" title="System interface." alt="" coords="154,5,220,32"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="179,46,153,113,148,111,174,44"/>
+</map>

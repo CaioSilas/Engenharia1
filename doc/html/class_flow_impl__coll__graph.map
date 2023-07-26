@@ -1,7 +1,7 @@
 <map id="FlowImpl" name="FlowImpl">
-<area shape="rect" id="Node000001" title="Class for FlowImpl representation." alt="" coords="33,112,106,139"/>
-<area shape="rect" id="Node000002" href="$class_flow.html" title="Flow interface." alt="" coords="5,5,54,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="42,45,67,111,62,113,37,47"/>
-<area shape="rect" id="Node000003" href="$class_system.html" title="System interface." alt="" coords="78,5,144,32"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="103,46,77,113,72,111,98,44"/>
+<area shape="rect" id="Node000001" title="Class for FlowImpl representation." alt="" coords="36,112,109,139"/>
+<area shape="rect" id="Node000002" href="$class_body.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="5,5,57,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,44,70,111,65,113,39,46"/>
+<area shape="rect" id="Node000003" href="$class_system.html" title="System interface." alt="" coords="81,5,147,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,46,80,113,75,111,101,44"/>
 </map>

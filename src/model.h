@@ -8,7 +8,7 @@
 #include "System.h"
 #include "Flow.h"
 
-using std::vector;
+using namespace std;
 
 /**
  * @brief Class for Model Interface representation
@@ -17,60 +17,68 @@ using std::vector;
 
 class Model {
     public:
+        /**
+         * @brief Create and add a System to the Model
+         * 
+         * @param name System name
+	     * @param value System value id
+         */
+        virtual System* createSystem(const string name = "", const double value = 0) = 0;
 
         /**
-        * @brief Instantiates a model
-        * @param name give a name of model
-        * @param time give a time od model
-        * @return Model*: The created model
-        *  
-        */
-	    static Model* createModel(const string name = "", const double time = 0.0);
-
-
-        /**
-        * @brief Creates a Flow and add it to the model
-        * @param name A name to flow
-        * @param source A pointer to the source system
-        * @param destiny A pointer to the destiny system
-        * @return Flow*: Returns a pointer to the created Flow
-        *  
-        */
-        template <typename T_FLOW>
-        Flow* createFlow(string name,System* source=NULL, System* destiny=NULL) {
-            Flow* f = new T_FLOW(name,source, destiny);
-            add(f);
-            return f;
+	     * @brief Create and add an Template of Flow to the Model
+	     * 
+	     * @param name Flow name
+	     * @param source Pointer to source System Interface
+         * @param destiny Pointer to destiny System Interface
+	     */
+        template<typename ConcreteFlow>
+        Flow* createFlow(const string name = "", System *source = NULL, System *destiny = NULL) {
+            Flow *flow = new ConcreteFlow(name, source, destiny);
+            add(flow);
+            return flow;
         }
 
         /**
-        * @brief Creates a System and add it to the model
-        * @param value Initial value to the created system
-        * @param name Name to the created system
-        * @return System*: The system that was just created
-        *  
-        */
-        virtual System* createSystem(double value=0, string name="")=0;
-        
+	     * @brief Create a new Model
+	     * 
+	     * @param name Model name
+	     * @param time Model initial time
+	     */
+        static Model* createModel(const string name = "", const double time = 0);
+
+        /**
+         * @brief Delete and remove a System from the Model
+         * 
+         * @param system Pointer to System to be deleted
+         */
+        virtual void deleteSystem(System* const system) = 0;
+
+        /**
+         * @brief Delete and remove a Flow from the Model
+         * 
+         * @param Flow Pointer to Flow to be deleted
+         */
+        virtual void deleteFlow(Flow* const Flow) = 0;
+
+        /**
+         * @brief Delete and remove a Model from the Model
+         * 
+         * @param Model Pointer to Model to be deleted
+         */
+        static void deleteModel(Model* const Model);
         /**
 	     * @brief Destroy the Model Interface object
 	     * 
 	     */
         virtual ~Model() {}
 
-        /**
-	     * @brief Add a new System Interface to the System Interface container
-	     * 
-	     * @param sys System Interface to be added
-	     */
-        virtual void add(System* System) = 0;
-
-        /**
+          /**
 	     * @brief Add a new Flow to the Flow container
 	     * 
 	     * @param Flow Flow to be added
 	     */
-        virtual void add(Flow* Flow) = 0;
+        virtual void add(Flow* const Flow) = 0;
 
         /**
 	     * @brief Run the simulation
@@ -82,9 +90,6 @@ class Model {
 	     * @return false: if it the simulation unsuccesful
 	     */
         virtual void run(int timeStart = 0, int timeEnd = 0, int timeVariance = 1) = 0;
-
-        typedef vector<System*>::iterator systemIterator;
-        typedef vector<Flow*>::iterator flowIterator;
         
         /**
          * @brief Get the First Iterator of System Interface the container
@@ -113,6 +118,20 @@ class Model {
          * @return vector<Flow*>::iterator 
          */
         virtual vector<Flow*>::iterator FlowEnd(void) = 0;
+
+        /**
+         * @brief Get the First Iterator of the Model container
+         * 
+         * @return vector<Model*>::iterator 
+         */
+        virtual vector<Model*>::iterator ModelBegin(void) = 0;
+
+        /**
+         * @brief Get the Last Iterator of the Model container
+         * 
+         * @return vector<Model*>::iterator 
+         */
+        virtual vector<Model*>::iterator ModelEnd(void) = 0;
 
         /**
 	     * @brief Set the Name object

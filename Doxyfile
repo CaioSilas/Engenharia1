@@ -943,7 +943,9 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = "D:/faculdade/5 periodo/Sprints/sprint3/src" \
+INPUT                  = "D:/faculdade/5 periodo/Sprints/sprint3" \
+                         "D:/faculdade/5 periodo/Sprints/sprint3/src" \
+                         "D:/faculdade/5 periodo/Sprints/sprint3/tests" \
                          "D:/faculdade/5 periodo/Sprints/sprint3/tests/funcional" \
                          "D:/faculdade/5 periodo/Sprints/sprint3/tests/unit"
 

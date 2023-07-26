@@ -4,8 +4,9 @@
 #define FLOWIMPL_H
 
 #include <string>
-#include "System.h"
 #include "Flow.h"
+#include "System.h"
+#include "handleBodySemDebug.h"
 
 using namespace std;
 
@@ -14,7 +15,7 @@ using namespace std;
  * 
  */
 
-class FlowImpl : public Flow{
+class FlowImpl : public Body{
     public:
 
         /**
@@ -40,12 +41,12 @@ class FlowImpl : public Flow{
          */
         void connect(System*source = NULL, System*destiny = NULL);
         
-        /**
-	     * @brief Execute the FlowImpl equation
-	     * 		  Abstract method to be overriden
-	     * @return double: FlowImpl value after executing
-	     */
-        virtual double execute() = 0;
+        // /**
+	    //  * @brief Execute the FlowImpl equation
+	    //  * 		  Abstract method to be overriden
+	    //  * @return double: FlowImpl value after executing
+	    //  */
+        // virtual double execute() = 0;
 
         /**
 	     * @brief Set the Name object
@@ -127,6 +128,56 @@ class FlowImpl : public Flow{
          * @return FlowImpl&: return the copy
          */
         FlowImpl& operator=(const FlowImpl& rhs); 
+};
+
+
+class FlowHandle : public Flow, public Handle<FlowImpl>{
+    public:
+        FlowHandle(string name = "", System* source = NULL, System* destiny = NULL){
+            pImpl_->setName(name);
+			pImpl_->setSource(source);
+			pImpl_->setDestiny(destiny);
+        }
+
+        virtual ~FlowHandle() {}
+
+		void connect(System* source = NULL, System* destiny = NULL){
+			return pImpl_->connect(source, destiny);
+		}
+
+		void setName(const string name) {
+			return pImpl_->setName(name);
+		}
+
+		void setValue(const double value){
+			return pImpl_->setValue(value);
+		}
+
+        void setSource(System* source) {
+			return pImpl_->setSource(source);
+		}
+
+        void setDestiny(System* destiny) {
+			return pImpl_->setDestiny(destiny);
+		}
+
+		string getName(void) const {
+			return pImpl_->getName();
+		}
+
+		double getValue() const {
+			return pImpl_->getValue();
+		}
+
+		System* getSource() const {
+			return pImpl_->getSource();
+		}
+
+        System* getDestiny() const {
+			return pImpl_->getDestiny();
+		}
+
+		virtual double execute() = 0;
 };
 
 #endif /* FlowImpl_H */
